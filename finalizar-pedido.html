@@ -1,0 +1,427 @@
+<!-- ===============================
+        TELA - FINALIZAR PEDIDO
+==================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar Pedido | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="finalizar-pedido.css">
+</head>
+
+<body>
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho cabecalho.perfil">
+
+        <a href="index.html" class="marca"></a>
+
+        <h1>
+            Raízes do Nordeste
+        </h1>
+
+        <p>
+            Revise seu pedido antes de continuar.
+        </p>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>
+                Meu pedido
+            </h2>
+
+            <div id="mensagem-carrinho-vazio" hidden>
+                <p>
+                    Seu carrinho está vazio.
+                </p>
+
+                <a href="pedidos.html">Voltar ao cardápio</a>
+            </div>
+
+            <div id="lista-produtos">
+<!-- Os produtos serão inseridos pelo JavaScript. -->
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>
+                Resumo da compra
+            </h2>
+
+            <p>
+                Subtotal:
+                <strong id="subtotal">R$ 0,00</strong>
+            </p>
+
+            <p>
+                Taxa de entrega:
+                <strong id="taxa-entrega">R$ 7,00</strong>
+            </p>
+
+            <p>
+                Total:
+                <strong id="total-pedido">R$ 0,00</strong>
+            </p>
+
+        </section>
+
+        <section id="secao-dados-entrega">
+
+            <h2>
+                Dados para entrega
+            </h2>
+
+            <p id="mensagem-login">
+                Para continuar, entre na sua conta ou faça seu cadastro.
+            </p>
+
+            <button 
+                type="button" 
+                id="botao-login"
+            >
+                Entrar na minha conta
+            </button>
+
+            <button 
+                type="button" 
+                id="botao-cadastro"
+            >
+                Criar cadastro
+            </button>
+
+<!-- Dados do cliente -->
+            <div id="dados-cliente" hidden>
+                <p>
+                    Nome: 
+                <strong id="nome-cliente"></strong>
+                </p>
+
+                <p>
+                    Endereço:
+                <strong id="endereco-cliente"></strong>
+                </p>
+
+                <button 
+                    type="button" 
+                    id="botao-alterar-endereco"
+                >
+                    Alterar endereço
+                </button>
+            </div>
+
+<!-- Formulário para alterar o endereço -->
+            <form id="formulario-endereco" hidden>
+
+                <h3>
+                    Informe o endereço para este pedido
+                </h3>
+
+                <div class="campo-endereco">
+                    <label for="entrega-cep">CEP:</label>
+                    <input
+                        type="text"
+                        id="entrega-cep"
+                        name="cep"
+                        placeholder="00000-000"
+                        maxlength="9"
+                        required
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-estado">Estado (UF):</label>
+                    <input
+                        type="text"
+                        id="entrega-estado"
+                        name="estado"
+                        maxlength="2"
+                        placeholder="PR"
+                        required
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-cidade">Cidade:</label>
+                    <input
+                        type="text"
+                        id="entrega-cidade"
+                        name="cidade"
+                        required
+                    >
+                 </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-bairro">Bairro:</label>
+                    <input
+                        type="text"
+                        id="entrega-bairro"
+                        name="bairro"
+                        required
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-rua">Rua:</label>
+                    <input
+                        type="text"
+                        id="entrega-rua"
+                        name="rua"
+                        required
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-numero">Número:</label>
+                    <input
+                        type="text"
+                        id="entrega-numero"
+                        name="numero"
+                        required
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-complemento">
+                        Complemento (opcional):
+                    </label>
+                    <input
+                        type="text"
+                        id="entrega-complemento"
+                        name="complemento"
+                    >
+                </div>
+
+                <div class="campo-endereco">
+                    <label for="entrega-referencia">
+                        Ponto de referência (opcional):
+                    </label>
+                    <input
+                        type="text"
+                        id="entrega-referencia"
+                        name="referencia"
+                    >
+                </div>
+
+                <button 
+                    type="submit" 
+                    id="botao-salvar-endereco"
+                >
+                    Salvar endereço para este pedido
+                </button>
+
+                <button 
+                    type="button" 
+                    id="botao-cancelar-endereco"
+                >
+                    Cancelar
+                </button>
+
+                <p id="mensagem-endereco" role="status"></p>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h2>
+                Fidelidade
+            </h2>
+
+            <p>
+                Seus pontos disponíveis:
+                <strong id="pontos-disponiveis">0</strong>
+            </p>
+
+            <p id="mensagem-fidelidade">
+                Entre na sua conta para consultar seus pontos.
+            </p>
+
+            <label id="opcao-usar-pontos" hidden>
+                <input 
+                    type="checkbox" 
+                    id="usar-pontos"
+                >
+                Quero utilizar meus pontos nesta compra.
+            </label>
+
+            <p>
+                Desconto:
+                <strong id="desconto-fidelidade">R$ 0,00</strong>
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>
+                Forma de pagamento
+            </h2>
+
+            <label>
+                <input 
+                    type="radio" 
+                    name="pagamento" 
+                    value="credito"
+                >
+                Cartão de crédito
+            </label>
+
+            <br>
+
+            <label>
+                <input 
+                    type="radio" 
+                    name="pagamento" 
+                    value="debito"
+                >
+                Cartão de débito
+            </label>
+
+            <br>
+
+            <p>
+                <small>
+                    Ambiente acadêmico de demonstração.
+                    Não informe dados reais de pagamento.
+                </small>
+            </p>
+
+            <div id="campos-cartao" hidden>
+                <label for="nome-cartao">Nome fictício no cartão:</label>
+                <input 
+                    type="text" 
+                    id="nome-cartao" 
+                    autocomplete="off"
+                >
+
+                <br>
+
+                <label for="numero-cartao">Número fictício do cartão:</label>
+                <input
+                    type="text"
+                    id="numero-cartao"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    maxlength="19"
+                >
+
+                <br>
+
+                <label for="validade-cartao">Validade fictícia:</label>
+                <input
+                    type="text"
+                    id="validade-cartao"
+                    placeholder="MM/AA"
+                    autocomplete="off"
+                    maxlength="5"
+                >
+
+                <br>
+
+                <label for="codigo-cartao">Código de segurança fictício:</label>
+                <input
+                    type="password"
+                    id="codigo-cartao"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    maxlength="4"
+                >
+            </div>
+
+        </section>
+
+        <button 
+            type="button" 
+            id="botao-confirmar-pedido"
+        >
+            Confirmar pedido
+        </button>
+
+        <p id="mensagem-status" role="status" aria-live="polite"></p>
+
+        <a href="pedidos.html">Voltar ao cardápio</a>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== -->
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="finalizar-pedido.js"></script>
+
+</body>
+</html>

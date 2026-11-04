@@ -1,0 +1,374 @@
+/*============================================ 
+        TELA - CONFIRMAR PEDIDO
+==============================================*/
+
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+.pagina-confirmacao,
+.pagina-confirmacao * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-texto);
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho-confirmacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background-color: var(--cor-texto);
+    background-image: url("img/cabecalho.png");
+    color: var(--cor-fundo);
+
+    padding: 14px 5%;
+    border-bottom: 4px solid var(--cor-laranja);
+}
+
+/* Logo e nome da marca */
+.cabecalho-confirmacao .marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+.cabecalho-confirmacao .logo {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+}
+
+.cabecalho-confirmacao .nome-marca {
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* Título do cabeçalho */
+.titulo-cabecalho {
+    text-align: right;
+}
+
+.cabecalho-confirmacao h1 {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 27px;
+}
+
+.cabecalho-confirmacao p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+.pagina-confirmacao {
+    width: 94%;
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 22px;
+    background-color: var(--cor-creme);
+    border: 1px solid var(--cor-creme);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(73, 51, 41, 0.10);
+}
+
+.pagina-confirmacao > h2 {
+    margin: 0 0 20px;
+
+    text-align: center;
+    font-family: var(--fonte-texto);
+    font-size: 22px;
+    color: var(--cor-marrom);
+}
+
+
+/* ----------------------------------- */ 
+/* ===== ORGANIZAÇÃO DOS BLOCOS ===== */
+.pagina-confirmacao section {
+    margin-bottom: 14px;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-branco);
+    border-radius: 8px;
+}
+
+.pagina-confirmacao section h3 {
+    margin: 0 0 10px;
+
+    color: var(--cor-marrom);
+    font-family: var(--fonte-texto);
+    font-size: 17px;
+}
+
+.pagina-confirmacao section p {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ----------------------------------- */ 
+/* ===== LISTA DE PRODUTOS ===== */
+#lista-resumo-produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.produto-resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cor-creme);
+}
+
+.produto-resumo:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.produto-resumo p {
+    margin: 0;
+}
+
+.produto-resumo .nome-produto {
+    font-weight: bold;
+}
+
+.produto-resumo .detalhes-produto {
+    color: var(--cor-marrom-claro);
+    font-size: 13px;
+    text-align: right;
+}
+
+
+/* ----------------------------------- */
+/* ===== RESUMO FINANCEIRO ===== */
+.resumo-valores p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.resumo-valores .valor-total {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--cor-creme);
+
+    color: var(--cor-laranja);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+/* ----------------------------------- */
+/* ===== DADOS DE ENTREGA ===== */
+#endereco-confirmacao {
+    overflow-wrap: anywhere;
+}
+
+
+/* ----------------------------------- */
+/* ===== MENSAGEM DE STATUS ===== */
+#mensagem-confirmacao {
+    margin: 12px 0;
+
+    text-align: center;
+    color: var(--cor-marrom);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ----------------------------------- */
+/* ===== BOTÕES ===== */
+.botoes-confirmacao {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.botoes-confirmacao button {
+    min-height: 44px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+    font-family: var(--fonte-texto);
+    font-size: 14px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Botão voltar */
+#botao-voltar-carrinho {
+    background-color: var(--cor-creme);
+    color: var(--cor-texto);
+}
+
+#botao-voltar-carrinho:hover {
+    background-color: var(--cor-marrom-claro);
+    color: var(--cor-branco);
+}
+
+/* Botão confirmar */
+#botao-confirmar-compra {
+    background-color: var(--cor-marrom);
+    color: var(--cor-branco);
+}
+
+#botao-confirmar-compra:hover {
+    background-color: var(--cor-marrom-claro);
+    transform: translateY(-2px);
+}
+
+/* Acessibilidade */
+.botoes-confirmacao button:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 3px;
+}
+
+
+/* ----------------------------------- */
+/* ===== ELEMENTOS OCULTOS ===== */
+[hidden] {
+    display: none !important;
+}
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape {
+    position: relative;
+    border-top: none;
+}
+
+.rodape::before {
+    content: "";
+    display: block;
+    width: min(95%, 1100px);
+    height: 3px;
+    margin: 0 auto;
+
+    background-color: var(--cor-marrom-escuro);
+}
+
+/* ----------------------- */  
+/* ==== RODAPÉ FINAL===== */  
+.rodape-final {
+    padding: 18px 20px;
+    background-color: var(--cor-marrom);
+    
+    color: var(--cor-branco);
+    border-top: 1px solid var(--cor-branco);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 750px) {
+    .cabecalho-confirmacao {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .cabecalho-confirmacao .marca {
+        justify-content: center;
+    }
+
+    .titulo-cabecalho {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+/* Cabeçalho */
+    .cabecalho-confirmacao {
+        padding: 12px;
+    }
+
+    .cabecalho-confirmacao .logo {
+        width: 55px;
+    }
+
+    .cabecalho-confirmacao .nome-marca {
+        font-size: 22px;
+    }
+
+    .cabecalho-confirmacao h1 {
+        font-size: 23px;
+    }
+
+    .cabecalho-confirmacao p {
+        font-size: 13px;
+    }
+
+/* Conteúdo */
+    .pagina-confirmacao {
+        width: 96%;
+        margin: 12px auto;
+        padding: 13px;
+    }
+
+    .pagina-confirmacao > h2 {
+        font-size: 19px;
+    }
+
+    .pagina-confirmacao section {
+        padding: 11px;
+    }
+
+    .pagina-confirmacao section h3 {
+        font-size: 16px;
+    }
+
+/* Produtos */
+    .produto-resumo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .produto-resumo .detalhes-produto {
+        text-align: left;
+    }
+
+/* Valores */
+    .resumo-valores p {
+        font-size: 13px;
+    }
+
+    .resumo-valores .valor-total {
+        font-size: 17px;
+    }
+
+/* Botões */
+    .botoes-confirmacao {
+        flex-direction: column;
+    }
+
+    .botoes-confirmacao button {
+        width: 100%;
+    }
+}

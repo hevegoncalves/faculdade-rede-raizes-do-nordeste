@@ -1,0 +1,327 @@
+/*============================================= 
+        TELA - ACOMPANHAMENTO DE PEDIDOS
+===============================================*/
+
+/*============================================  
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+.pagina-acompanhamento,
+.pagina-acompanhamento * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-titulo);
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho-acompanhamento {
+    padding: 16px 20px;
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-creme);
+    text-align: center;
+}
+
+.cabecalho-acompanhamento h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+.cabecalho-acompanhamento p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+.pagina-acompanhamento {
+    width: 94%;
+    max-width: 760px;
+    margin: 22px auto;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(73, 51, 41, 0.10);
+}
+
+
+/*-------------------------------- */ 
+/* ====== CABEÇALHO PEDIDO ===== */ 
+.cabecalho-pedido {
+    text-align: center;
+}
+
+.cabecalho-pedido h2 {
+    margin: 0 0 10px;
+    color: var(--cor-texto);
+}
+
+#numero-pedido {
+    font-size: 14px;
+    color: var(--cor-marrom-claro);
+    overflow-wrap: anywhere;
+}
+
+#mensagem-status {
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+/* animação pedido */
+.animacao-pedido {
+    margin: 20px 0;
+    padding: 20px 12px;
+    text-align: center;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 10px;
+}
+
+.icone-etapa {
+    font-size: 65px;
+    animation: flutuar 2s ease-in-out infinite;
+}
+
+.animacao-pedido h3 {
+    margin: 10px 0 5px;
+    color: var(--cor-texto);
+}
+
+.animacao-pedido p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* passar em cima do icone */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/*-------------------------------- */ 
+/* ====== LISTA DE ETAPAS ===== */ 
+.etapas-pedido {
+    margin-top: 20px;
+}
+
+.etapas-pedido > h3 {
+    color: var(--cor-texto);
+}
+
+.etapa {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 8px;
+}
+
+.icone-status {
+    font-size: 25px;
+    text-align: center;
+}
+
+.etapa strong {
+    display: block;
+    font-size: 14px;
+}
+
+.etapa p {
+    margin: 4px 0 0;
+    color: var(--cor-marrom);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.indicador-status {
+    font-size: 12px;
+    color: var(--cor-marrom-claro);
+    text-align: right;
+}
+
+/* etapas concluidas e atual */
+.etapa.concluida {
+    background-color: var(--cor-fundo);
+    border-color: #b9d4ae;
+}
+
+.etapa.concluida .indicador-status {
+    color: #38652f;
+    font-weight: bold;
+}
+
+.etapa.atual {
+    border: 2px solid var(--cor-marrom);
+    background-color: var(--cor-creme);
+}
+
+.etapa.atual .indicador-status {
+    color: var(--cor-marrom-escuro);
+    font-weight: bold;
+}
+
+
+/*------------------ */ 
+/* ===== BOTÕES===== */
+.acoes-pedido {
+    margin-top: 18px;
+    text-align: center;
+}
+
+#aviso-simulacao {
+    color: var(--cor-marrom);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pagina-acompanhamento button {
+    min-height: 42px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagina-acompanhamento button:hover {
+    background-color: var(--cor-marrom-claro);
+}
+
+.pagina-acompanhamento button:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 3px;
+}
+
+.pagina-acompanhamento button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/*------------------ */ 
+/* AVALIAÇÃO */
+.area-avaliacao {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 10px;
+}
+
+.area-avaliacao h3 {
+    color: var(--cor-marrom-escuro);
+}
+
+.area-avaliacao label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.area-avaliacao select,
+.area-avaliacao textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 6px;
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    font: inherit;
+}
+
+.area-avaliacao textarea {
+    resize: vertical;
+}
+
+.area-avaliacao form button {
+    margin-top: 14px;
+}
+
+#mensagem-avaliacao {
+    font-weight: bold;
+    color: #38652f;
+}
+
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape-acompanhamento {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rodape-acompanhamento a {
+    color: var(--cor-marrom-escuro);
+    font-weight: bold;
+}
+
+/* ----------------- */ 
+/* ELEMENTOS OCULTOS */
+[hidden] {
+    display: none !important;
+}
+
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+ 
+@media (max-width: 600px) {
+    .cabecalho-acompanhamento {
+        padding: 13px;
+    }
+
+    .cabecalho-acompanhamento h1 {
+        font-size: 23px;
+    }
+
+    .pagina-acompanhamento {
+        width: 96%;
+        margin: 12px auto;
+        padding: 12px;
+    }
+
+    .etapa {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    .etapa .indicador-status {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .icone-etapa {
+        font-size: 55px;
+    }
+
+    .pagina-acompanhamento button {
+        max-width: 100%;
+    }
+}
+
+
+/* -------------------------- */   
+/* ==== REDUÇÃO ANIMAÇÃO ===== */   
+@media (prefers-reduced-motion: reduce) {
+    .icone-etapa {
+        animation: none;
+    }
+}

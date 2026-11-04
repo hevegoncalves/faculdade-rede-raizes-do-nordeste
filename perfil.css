@@ -1,0 +1,624 @@
+/*=======================
+        TELA - PERFIL
+=========================*/
+
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+.pagina-perfil {
+    min-height: 100vh;
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+}
+
+.pagina-perfil * {
+    box-sizing: border-box;
+}
+
+.perfil-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 6%;
+    background-color: var(--cor-texto);
+    color: var(--cor-branco);
+}
+
+.logo-perfil img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+.cabecalho-perfil nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cabecalho-perfil nav a {
+    color: var(--cor-branco);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.cabecalho-perfil nav a:hover {
+    color: var(--cor-laranja);
+}
+
+#botao-sair {
+    padding: 10px 16px;
+    border: 1px solid var(--cor-branco);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--cor-branco);
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+#botao-sair:hover {
+    background-color: var(--cor-marrom-claro);
+}
+
+/* boas vindas*/
+.boas-vindas {
+    margin-bottom: 30px;
+}
+
+.texto-destaque {
+    color: var(--cor-laranja-escuro);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.boas-vindas h1 {
+    margin: 10px 0;
+    font-size: 32px;
+}
+
+.boas-vindas > p:last-child {
+    line-height: 1.7;
+}
+
+
+/*------------------------ */ 
+/* ===== CARTÃO DO CARRINHO ===== */
+.cartao-carrinho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 25px;
+    border: 2px solid var(--cor-laranja);
+    border-radius: 14px;
+    background-color: var(--cor-branco);
+    box-shadow: 0 4px 12px rgba(73, 53, 43, 0.08);
+}
+
+.icone-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--cor-creme-escuro);
+    font-size: 42px;
+}
+
+.informacoes-carrinho {
+    flex: 1;
+    min-width: 220px;
+}
+
+.informacoes-carrinho h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.informacoes-carrinho p {
+    line-height: 1.5;
+}
+
+#quantidade-carrinho {
+    color: var(--cor-laranja-escuro);
+    font-weight: bold;
+}
+
+
+/*------------------------ */ 
+/* ===== BOTÕES ===== */
+.botao-carrinho,
+.botao-acompanhar {
+    display: inline-block;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--cor-laranja-escuro);
+
+    color: var(--cor-branco);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+    transition: background-color 0.2s;
+}
+
+.botao-carrinho:hover,
+.botao-acompanhar:hover {
+    background-color: var(--cor-laranja-escuro);
+}
+
+.botao-carrinho:focus-visible,
+.botao-acompanhar:focus-visible,
+#botao-sair:focus-visible {
+    outline: 3px solid var(--cor-amarelo);
+    outline-offset: 3px;
+}
+
+/*------------------------------------------ */
+/* ===== CARTÕES DE DADOS E PEDIDOS ===== */
+.dados-perfil,
+.area-pedidos {
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--cor-branco);
+    box-shadow: 0 3px 10px rgba(73, 53, 43, 0.06);
+}
+
+.dados-perfil h2,
+.area-pedidos h2 {
+    margin-top: 0;
+    color: var(--cor-texto);
+}
+
+.texto-secao {
+    margin-bottom: 25px;
+    color: var(--cor-marrom-claro);
+}
+
+/* dados do cliente */
+.campo-perfil {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-creme);
+}
+
+.campo-perfil span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--cor-marrom-claro);
+    font-size: 13px;
+}
+
+.campo-perfil p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.titulo-endereco-perfil {
+    margin-top: 30px;
+}
+
+.aviso-endereco {
+    color: var(--cor-marrom-claro);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------
+   =====PROGRAMA DE FIDELIDADE=====*/
+.area-fidelidade {
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 2px solid var(--cor-laranja);
+    border-radius: 12px;
+    background-color: var(--cor-branco);
+    box-shadow: 0 3px 10px rgba(73, 53, 43, 0.06);
+}
+
+.area-fidelidade h2 {
+    margin-top: 0;
+    color: var(--cor-texto);
+    font-size: 25px;
+}
+
+.area-fidelidade p {
+    line-height: 1.7;
+}
+
+.area-fidelidade a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--cor-laranja-escuro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.area-fidelidade a:hover {
+    text-decoration: underline;
+}
+
+/* Texto de adesão */
+.aceite-fidelidade {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 22px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--cor-creme-escuro);
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.aceite-fidelidade input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    accent-color: var(--cor-laranja-escuro);
+}
+
+/* Botão de adesão */
+#botao-aderir-fidelidade {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--cor-laranja-escuro);
+    color: var(--cor-branco);
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#botao-aderir-fidelidade:hover:not(:disabled) {
+    background-color: var(--cor-marrom-claro);
+}
+
+#botao-aderir-fidelidade:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#botao-aderir-fidelidade:focus-visible {
+    outline: 3px solid var(--cor-amarelo);
+    outline-offset: 3px;
+}
+
+/* Mensagem de adesão */
+#mensagem-adesao-fidelidade {
+    color: var(--cor-laranja-escuro);
+    font-weight: bold;
+}
+
+/* Painel de cliente participante */
+.status-fidelidade {
+    color: var(--cor-laranja-escuro);
+    font-weight: bold;
+}
+
+/* Cartão de pontuação */
+.cartao-pontos {
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--cor-texto);
+
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+.cartao-pontos span {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.cartao-pontos strong {
+    display: block;
+    margin: 12px 0;
+    color: var(--cor-laranja);
+    font-size: 42px;
+}
+
+.cartao-pontos p {
+    margin-bottom: 0;
+}
+
+/* Informações sobre descontos */
+.informacoes-fidelidade {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--cor-creme-escuro);
+}
+
+.informacoes-fidelidade h3 {
+    margin-top: 0;
+    color: var(--cor-texto);
+}
+
+.informacoes-fidelidade p {
+    margin: 8px 0;
+}
+
+
+/*---------------------------------- */ 
+/* ===== HISTÓRICO DE PEDIDOS ===== */
+/* Organização dos cartões */
+.lista-meus-pedidos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* Cartão individual */
+.cartao-pedido {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid var(--cor-creme);
+    border-left: 5px solid var(--cor-laranja);
+    border-radius: 12px;
+    background-color: var(--cor-fundo);
+    box-shadow: 0 4px 12px rgba(73, 53, 43, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-pedido:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(73, 53, 43, 0.12);
+}
+
+/* Número, data e status */
+.cabecalho-pedido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cor-creme);
+}
+
+.cabecalho-pedido h3 {
+    margin: 0 0 8px;
+    color: var(--cor-texto);
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.data-pedido {
+    margin: 0;
+    color: var(--cor-marrom-claro);
+    font-size: 13px;
+}
+
+/* Etiqueta do status */
+.status-pedido {
+    display: inline-block;
+    max-width: 100%;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background-color: var(--cor-creme);
+    color: var(--cor-laranja-escuro);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Produtos comprados */
+.produtos-pedido {
+    margin: 18px 0 10px;
+}
+
+.produtos-pedido h4 {
+    margin: 0 0 10px;
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.produtos-pedido ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.produtos-pedido li {
+    margin-bottom: 5px;
+    color: var(--cor-marrom);
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* Valor total */
+.total-pedido {
+    margin: 12px 0 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--cor-creme);
+    color: var(--cor-texto);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Avaliação do pedido */
+.avaliacao-pedido {
+    margin-bottom: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--cor-creme);
+    overflow-wrap: anywhere;
+}
+
+.avaliacao-pedido strong {
+    font-size: 14px;
+}
+
+.avaliacao-pedido span {
+    color: var(--cor-laranja);
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.avaliacao-pedido p {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Botão de acompanhamento */
+.botao-acompanhar {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+
+    padding: 13px 16px;
+
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape-perfil {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+.rodape-perfil p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 850px) {
+    .lista-meus-pedidos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .cabecalho-perfil {
+        justify-content: center;
+    }
+
+    .cabecalho-perfil nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .perfil-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .boas-vindas h1 {
+        font-size: 26px;
+    }
+
+    .cartao-carrinho {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .icone-carrinho {
+        align-self: center;
+    }
+
+    .informacoes-carrinho {
+        min-width: 0;
+    }
+
+    .botao-carrinho {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dados-perfil,
+    .area-pedidos,
+    .area-fidelidade {
+        padding: 18px;
+    }
+
+    #botao-aderir-fidelidade {
+        width: 100%;
+    }
+
+    .cartao-pontos {
+        padding: 20px;
+    }
+
+    .lista-meus-pedidos {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .cartao-pedido {
+        padding: 17px;
+    }
+
+    .cabecalho-pedido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cabecalho-pedido h3 {
+        font-size: 17px;
+    }
+
+    .total-pedido {
+        font-size: 17px;
+    }
+
+    .botao-acompanhar {
+        padding: 14px 12px;
+    }
+}
+
+
+/* -------------------------- */    
+/* ==== REDUÇÃO ANIMAÇÃO ===== */   
+@media (prefers-reduced-motion: reduce) {
+    .cartao-pedido,
+    .botao-carrinho,
+    .botao-acompanhar,
+    #botao-sair {
+        transition: none;
+    }
+
+    .cartao-pedido:hover {
+        transform: none;
+    }
+}

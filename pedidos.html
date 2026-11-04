@@ -1,0 +1,1220 @@
+<!-- ============================
+        TELA - PEDIDOS
+================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faça seu Pedido | Raízes do Nordeste</title>
+
+<!-- ===== FONTE DO PROJETO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap" 
+        rel="stylesheet"
+    >
+
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap" 
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pedidos.css">
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho" id="topo">
+
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="marca" aria-label="Raízes do Nordeste - Página incial"> 
+                <img 
+                    src="img/logo.png" 
+                    alt="Logo Raízes do Nordeste"
+                    class="logo"
+                > 
+            </a>
+            
+            <div class="titulo-pedidos">
+                <h1>
+                    Faça seu pedido!
+                </h1>
+
+                <p>
+                    O sabor do Nordeste na sua mesa.
+                </p>
+            </div>
+
+            <a href="index.html" class="botao-voltar">Voltar ao início</a>
+        </div>
+
+    </header>
+
+    <main class="conteudo-pedidos">
+
+<!-- ===== CONTEUDO PRINCIPAL ===== --> 
+<!-- CATEGORIAS -->
+        <section class="secao-categorias" aria-labelledby="titulo-categorias">
+
+            <h2 id="titulo-categorias">
+                O que você vai comer hoje?
+            </h2>
+
+            <p>
+                Escolha uma categoria para conhecer nossas delícias.
+            </p>
+
+            <nav class="categorias-pedidos" aria-label="Categorias do cardápio">
+
+                <a href="#promocoes">Promoções</a>
+                <a href="#pratos">Pratos</a>
+                <a href="#lanches">Lanches</a>
+                <a href="#porcoes">Porções</a>
+                <a href="#sobremesas">Sobremesas</a>
+                <a href="#bebidas">Bebidas</a>
+
+            </nav>
+
+        </section>
+
+<!-- QUADROS DE CATEGORIAS DE COMIDAS -->
+        <div class="area-compras">
+            <div class="lista-produtos">
+<!-- 1 - PROMOÇÕES -->
+                <section id="promocoes" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🔥 Ofertas da Casa
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Seus sabores favoritos com preços especiais!
+                    </p>
+
+                    <div class="grade-produtos">
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/baiao-de-dois.jpg" 
+                                alt="Baião de Dois"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Baião de Dois
+                                </h3>
+
+                                <p>
+                                    Arroz, feijão-verde, queijo coalho e temperos regionais.
+                                </p>
+
+                                <p class="preco">
+                                    <del>R$ 32,90</del>
+                                    <strong>R$ 27,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button
+                                    type="button"
+                                    class="botao-adicionar"
+                                    data-id="baiao"
+                                    data-name="Baião de Dois"
+                                    data-price="27.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/tapioca-recheada.jpg" 
+                                alt="Tapioca Recheada"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Tapioca Recheada
+                                </h3>
+
+                                <p>
+                                    Tapioca macia, recheada com queijo coalho e carne de sol.
+                                </p>
+
+                                <p class="preco">
+                                    <del>R$ 18,90</del>
+                                    <strong>R$ 15,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button
+                                    type="button"
+                                    class="botao-adicionar"
+                                    data-id="tapioca"
+                                    data-name="Tapioca Recheada"
+                                    data-price="15.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/dadinho-de-tapioca.jpg" 
+                                alt="Dadinho de Tapioca"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Dadinho de Tapioca
+                                </h3>
+
+                                <p>
+                                    Cubinhos crocantes de tapioca com queijo coalho.
+                                </p>
+
+                                <p class="preco">
+                                    <del>R$ 21,90</del>
+                                    <strong>R$ 17,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button
+                                    type="button"
+                                    class="botao-adicionar"
+                                    data-id="dadinho"
+                                    data-name="Dadinho de Tapioca"
+                                    data-price="17.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/cartola-nordestina.jpg" 
+                                alt="Cartola Nordestina"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Cartola Nordestina
+                                </h3>
+
+                                <p>
+                                    Banana, queijo, açúcar e canela em uma combinação especial.
+                                </p>
+
+                                <p class="preco">
+                                    <del>R$ 14,90</del>
+                                    <strong>R$ 11,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button
+                                    type="button"
+                                    class="botao-adicionar"
+                                    data-id="cartola"
+                                    data-name="Cartola Nordestina"
+                                    data-price="11.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+
+<!-- 2 - PRATOS -->
+                <section id="pratos" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🍲 Pratos nordestinos
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Receitas que carregam a tradição da nossa terra.
+                    </p>
+
+                    <div class="grade-produtos">
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/baiao-de-dois.jpg" 
+                                alt="Baião de Dois"
+                                >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Baião de Dois
+                                </h3>
+
+                                <p>
+                                    Arroz, feijão-verde, queijo coalho e temperos regionais.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 27,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="baiao" 
+                                    data-name="Baião de Dois" 
+                                    data-price="27.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/carne-de-sol.jpg" 
+                                alt="Carne de Sol com Macaxeira"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Carne de Sol com Macaxeira
+                                </h3>
+
+                                <p>
+                                    Carne de sol suculenta acompanhada de macaxeira cozida.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 39,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="carne-sol" 
+                                    data-name="Carne de Sol com Macaxeira" 
+                                    data-price="39.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/moqueca.jpg" 
+                                alt="Moqueca de Peixe"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Moqueca de Peixe
+                                </h3>
+
+                                <p>
+                                    Peixe preparado com leite de coco, tomate, pimentão e temperos.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 42,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="moqueca" 
+                                    data-name="Moqueca de Peixe" 
+                                    data-price="42.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/escondidinho.jpg" 
+                                alt="Escondidinho de Carne de Sol"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Escondidinho de Carne de Sol
+                                </h3>
+
+                                <p>
+                                    Purê de macaxeira cremoso com recheio de carne de sol.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 34,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="escondidinho" 
+                                    data-name="Escondidinho de Carne de Sol" 
+                                    data-price="34.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/galinhada.jpg" 
+                                alt="Galinhada Nordestina"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Galinhada Nordestina
+                                </h3>
+
+                                <p>
+                                    Arroz preparado com frango e temperos caseiros.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 31,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="galinhada" 
+                                    data-name="Galinhada Nordestina" 
+                                    data-price="31.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+
+<!-- 3 - LANCHES -->
+                <section id="lanches" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🥪 Lanches nordestinos
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Uma pausa saborosa para matar a fome!
+                    </p>
+
+                    <div class="grade-produtos">
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/sanduiche-de-sol.png" 
+                                alt="Sanduíche de Carne de Sol"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Sanduíche de Carne de Sol
+                                </h3>
+
+                                <p>
+                                    Pão recheado com carne de sol e queijo coalho.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 24,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="sanduiche" 
+                                    data-name="Sanduíche de Carne de Sol" 
+                                    data-price="24.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/tapioca-recheada.jpg" 
+                                alt="Tapioca Recheada"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Tapioca Recheada
+                                </h3>
+
+                                <p>
+                                    Tapioca macia com recheio de queijo coalho e carne de sol.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 15,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="tapioca" 
+                                    data-name="Tapioca Recheada" 
+                                    data-price="15.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/cuscuz.jpg" 
+                                alt="Cuscuz Recheado"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Cuscuz Recheado
+                                </h3>
+
+                                <p>
+                                    Cuscuz de milho com recheio saboroso de queijo e ovos.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 19,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="cuscuz" 
+                                    data-name="Cuscuz Recheado" 
+                                    data-price="19.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/pastel-regional.jpg" 
+                                alt="Pastel Regional"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Pastel Regional
+                                </h3>
+
+                                <p>
+                                    Pastel crocante com recheio temperado.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 12,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="pastel" 
+                                    data-name="Pastel Regional" 
+                                    data-price="12.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/cachorro-quente-regional.jpg" 
+                                alt="Cachorro-quente Regional"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Cachorro-quente Regional
+                                </h3>
+
+                                <p>
+                                    Pão, salsicha, molho e acompanhamentos.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 15,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="cachorro-quente" 
+                                    data-name="Cachorro-quente Regional" 
+                                    data-price="15.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+
+<!-- 4 - PORÇÕES -->
+                <section id="porcoes" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🍟 Porções
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Boas conversas combinam com boas porções.
+                    </p>
+
+                    <div class="grade-produtos">
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/macaxera-frita.jpg" 
+                                alt="Macaxeira Frita"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Macaxeira Frita
+                                </h3>
+
+                                <p>
+                                    Macaxeira dourada por fora e macia por dentro.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 19,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="macaxeira-frita" 
+                                    data-name="Macaxeira Frita" 
+                                    data-price="19.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/queijo-coalho.jpg" 
+                                alt="Queijo Coalho Grelhado"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Queijo Coalho Grelhado
+                                </h3>
+
+                                <p>
+                                    Queijo coalho grelhado, dourado e saboroso.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 22,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="queijo-coalho" 
+                                    data-name="Queijo Coalho Grelhado" 
+                                    data-price="22.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/carne-de-sol-acebolado.jpg" 
+                                alt="Carne de Sol Acebolada"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Carne de Sol Acebolada
+                                </h3>
+
+                                <p>
+                                    Carne de sol preparada com cebolas douradas.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 36,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="carne-acebolada" 
+                                    data-name="Carne de Sol Acebolada" 
+                                    data-price="36.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/torresmo-crocante.jpg" 
+                                alt="Torresmo Crocante"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Torresmo Crocante
+                                </h3>
+
+                                <p>
+                                    Torresmo dourado e crocante, preparado na hora.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 24,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="torresmo" 
+                                    data-name="Torresmo Crocante" 
+                                    data-price="24.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/dadinho-de-tapioca.jpg" 
+                                alt="Dadinho de Tapioca"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Dadinho de Tapioca
+                                </h3>
+
+                                <p>
+                                    Cubinhos de tapioca com queijo coalho.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 17,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="dadinho" 
+                                    data-name="Dadinho de Tapioca" 
+                                    data-price="17.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+
+<!-- 5 - SOBREMESAS -->
+                <section id="sobremesas" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🍮 Sobremesas
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Doces que trazem aquele gostinho de tradição.
+                    </p>
+
+                    <div class="grade-produtos">
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/bolo-de-rolo.jpg" 
+                                alt="Bolo de Rolo"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Bolo de Rolo
+                                </h3>
+
+                                <p>
+                                    Massa fina enrolada com recheio de goiabada.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 12,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="bolo-rolo" 
+                                    data-name="Bolo de Rolo" 
+                                    data-price="12.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/cocada-caseira.jpg" 
+                                alt="Cocada Caseira"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Cocada Caseira
+                                </h3>
+
+                                <p>
+                                    Doce de coco com sabor tradicional
+                                    .</p>
+
+                                <p class="preco">
+                                    <strong>R$ 8,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="cocada" 
+                                    data-name="Cocada Caseira" 
+                                    data-price="8.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/pudim.jpg" 
+                                alt="Pudim da Casa"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Pudim da Casa
+                                </h3>
+
+                                <p>
+                                    Pudim cremoso com calda de caramelo.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 10,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="pudim" 
+                                    data-name="Pudim da Casa" 
+                                    data-price="10.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/cartola-nordestina.jpg" 
+                                alt="Cartola Nordestina"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Cartola Nordestina
+                                </h3>
+
+                                <p>
+                                    Banana, queijo, açúcar e canela.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 11,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="cartola" 
+                                    data-name="Cartola Nordestina" 
+                                    data-price="11.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/canjica.jpg" 
+                                alt="Canjica Nordestina"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Canjica Nordestina
+                                </h3>
+
+                                <p>
+                                    Milho, leite, açúcar e um toque de canela.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 9,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="canjica" 
+                                    data-name="Canjica Nordestina" 
+                                    data-price="9.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+
+<!-- 6 - BEBIDAS -->
+                <section id="bebidas" class="categoria-produtos">
+
+                    <div class="cabecalho-categoria">
+                        <h2>
+                            🥤 Bebidas
+                        </h2>
+
+                        <a href="#topo" class="botao-voltar-topo">↑ Voltar ao topo</a>
+                    </div>
+
+                    <p class="descricao-categoria">
+                        Refresque seu momento com nossas bebidas.
+                    </p>
+
+                    <div class="grade-produtos">
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/suco-de-laranja.jpg" 
+                                alt="Suco Natural"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Suco de Laranja
+                                </h3>
+
+                                <p>
+                                    Suco de fruta preparado para acompanhar sua refeição.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 9,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="suco-laranja" 
+                                    data-name="Suco de Laranja" 
+                                    data-price="9.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/refrugerante.jpg" 
+                                alt="Refrigerante"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Refrigerante
+                                </h3>
+
+                                <p>
+                                    Bebida gelada para acompanhar seu pedido.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 7,00</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="refrigerante" 
+                                    data-name="Refrigerante" 
+                                    data-price="7.00">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/agua.jpg" 
+                                alt="Água Mineral"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Água Mineral
+                                </h3>
+
+                                <p>
+                                    Água mineral para refrescar sua refeição.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 4,00</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="agua-mineral" 
+                                    data-name="Água Mineral" 
+                                    data-price="4.00">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/agua-de-coco.jpg" 
+                                alt="Água de Coco"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Água de Coco
+                                </h3>
+
+                                <p>
+                                    Bebida refrescante, com sabor tropical.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 8,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="agua-coco" 
+                                    data-name="Água de Coco" 
+                                    data-price="8.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+
+                        <article class="produto-card">
+
+                            <img 
+                                src="img/suco-de-caja.jpg" 
+                                alt="Suco de Cajá"
+                            >
+
+                            <div class="produto-informacoes">
+                                <h3>
+                                    Suco de Cajá
+                                </h3>
+
+                                <p>
+                                    Suco de cajá com sabor marcante e refrescante.
+                                </p>
+
+                                <p class="preco">
+                                    <strong>R$ 9,90</strong>
+                                </p>
+<!-- botão adicionar ao carrino-->
+                                <button 
+                                    type="button" 
+                                    class="botao-adicionar"
+                                    data-id="suco-caja" 
+                                    data-name="Suco de Cajá" 
+                                    data-price="9.90">
+                                    Adicionar ao carrinho
+                                </button>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </section>
+            </div>
+
+<!-- ===== CARRINHO TELA LATERAL DIREITA ===== --> 
+            <aside id="carrinho" class="carrinho-pedidos" aria-labelledby="titulo-carrinho">
+
+                <h2 id="titulo-carrinho">
+                    🛒 Meu carrinho
+                </h2>
+
+                <p id="carrinho-vazio">
+                    Você ainda não adicionou nenhum produto.
+                </p>
+
+                <div id="itens-carrinho" aria-live="polite">
+<!-- Os produtos escolhidos serão inseridos pelo JavaScript. -->
+                </div>
+                <div class="resumo-carrinho">
+                    <p>
+                        <span>Subtotal:</span>
+                        <strong id="subtotal-carrinho">R$ 0,00</strong>
+                    </p>
+                </div>
+
+                <button type="button" id="botao-finalizar" disabled>
+                    Ver carrinho
+                </button>
+
+            </aside>
+        </div>
+
+    </main>
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== --> 
+     <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+     </footer>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+    <footer class="rodape-pedidos">
+        <p>&copy; 2026 Raízes do Nordeste. Todos os direitos reservados.</p>
+    </footer>
+
+
+<!-- ===== JavaScript ===== -->
+<script src="pedidos.js"></script>
+<script src="verificar-unidade.js"></script>
+
+</body>
+</html>

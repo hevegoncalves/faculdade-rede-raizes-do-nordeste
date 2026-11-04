@@ -1,0 +1,952 @@
+<!-- ==========================
+        TELA - CARDÁPIO
+=============================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="marca">
+                <img 
+                    src="img/logo.png" 
+                    alt="Logo Raízes do Nordeste" 
+                    class="logo"
+                >
+                
+                <span class="nome-marca">RAÍZES DO NORDESTE</span>
+            </a>
+
+<!-- botão menu -->
+            <button
+                class="botao-menu"
+                id="botaoMenu"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menuNavegacao"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-navegacao" id="menuNavegacao" aria-label="Menu principal">
+
+                <a href="index.html" class="link-navegacao">Início</a>
+                <a href="cardapio.html" class="link-cardapio ativo" aria-current="page">Cardápio</a>
+                <a href="index.html#sobre" class="link-sobre">Nossa história</a>
+                <a href="unidades.html" class="link-unidades">Nossas unidades</a>
+                <a href="cadastro.html" class="link-cadastro"> Minha conta</a>
+
+            </nav>
+        </div>
+
+    </header>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+ <!-- Apresentação do cardapio -->
+    <main class="pagina-cardapio">
+
+        <section class="hero-cardapio">
+
+            <div class="hero-conteudo">
+                <span class="etiqueta-cardapio">SABORES DA NOSSA TERRA</span>
+
+                <h1>
+                    Um pedacinho do Nordeste
+                    em cada sabor!
+                </h1>
+
+                <p>
+                    Receitas cheias de tradição, ingredientes
+                    selecionados e aquele tempero que faz
+                    a gente se sentir em casa.
+                </p>
+
+                <a href="pedidos.html" class="botao-explorar">FAZER MEU PEDIDO</a>
+            </div>
+
+        </section>
+
+<!-- navegando pelas categorias de comidas -->
+        <nav class="atalhos-cardapio" aria-label="Escolha uma categoria">
+
+            <a href="#promocoes">Promoções</a>
+            <a href="#pratos">Pratos</a>
+            <a href="#lanches">Lanches</a>
+            <a href="#porcoes">Porções</a>
+            <a href="#sobremesas">Sobremesas</a>
+            <a href="#bebidas">Bebidas</a>
+
+        </nav>
+
+<!-- PROMOÇÕES -->
+        <section class="categoria-cardapio categoria-promocoes" id="promocoes">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">01</span>
+
+                <div>
+                    <span class="subtitulo-categoria">OFERTAS ESPECIAIS</span>
+
+                    <h2>
+                        Promoções da casa
+                    </h2>
+
+                    <p>
+                        Seus sabores favoritos com preços especiais!
+                    </p>
+                </div>
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/promocao.jpg"
+                        alt="Seleção de comidas nordestinas da casa"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">OFERTAS DA CASA</span>
+                </div>
+
+                <div class="lista-categoria">
+                    <div class="titulo-lista">
+                        <h3>
+                            Ofertas para aproveitar
+                        </h3>
+
+                        <span>ESCOLHA SEU FAVORITO</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Baião de dois
+                                </h4>
+
+                                <p>
+                                    Irresistível.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 27,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Tapioca Recheada
+                                </h4>
+
+                                <p>
+                                    Saborosa.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 15,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Dodinho de Tapioca
+                                </h4>
+
+                                <p>
+                                    Crocante.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 17,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Cartola Nordestina
+                                </h4>
+
+                                <p>
+                                    Deliciosa.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 11,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- PRATOS -->
+        <section id="pratos" class="categoria-cardapio">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">03</span>
+
+                <div>
+                    <span class="subtitulo-categoria">TRADIÇÃO NO PRATO</span>
+
+                    <h2>
+                        Pratos nordestinos
+                    </h2>
+
+                    <p>
+                        Receitas que carregam a tradição da nossa terra.
+                    </p>
+                </div>
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/baiao-de-dois.jpg"
+                        alt="Pratos tradicionais da culinária nordestina"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">SABOR DE CASA</span>
+                </div>
+
+                <div class="lista-categoria">
+                    <div class="titulo-lista">
+                        <h3>
+                            Pratos da casa
+                        </h3>
+
+                        <span>RECEITAS REGIONAIS</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Baião de Dois
+                                </h4>
+
+                                <p>
+                                    Arroz, feijão, queijo coalho e temperos.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 32,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Carne de Sol com Macaxeira
+                                </h4>
+
+                                <p>
+                                    Carne de sol acompanhada de macaxeira.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 39,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Moqueca de Peixe
+                                </h4>
+
+                                <p>
+                                    Peixe preparado com leite de coco e temperos.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 42,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Escondidinho de Carne de Sol
+                                </h4>
+
+                                <p>
+                                    Purê cremoso com recheio de carne de sol.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 34,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Galinhada Nordestina
+                                </h4>
+
+                                <p>
+                                    Arroz preparado com frango e temperos.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 31,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- LANCHES -->
+        <section id="lanches" class="categoria-cardapio">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">02</span>
+
+                <div>
+                    <span class="subtitulo-categoria">PARA QUALQUER HORA</span>
+
+                    <h2>
+                        Lanches nordestinos
+                    </h2>
+
+                    <p>
+                        Uma pausa saborosa para matar a fome!
+                    </p>
+                </div>
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/pastel-regional.jpg"
+                        alt="Seleção de lanches regionais"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">FEITOS COM SABOR</span>
+                </div>
+
+                <div class="lista-categoria">
+
+                    <div class="titulo-lista">
+                        <h3>
+                            Nossos lanches
+                        </h3>
+
+                        <span>LANCHES DA CASA</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Sanduíche de Carne de Sol
+                                </h4>
+
+                                <p>
+                                    Carne de sol, queijo coalho e molho especial.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 24,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Tapioca Recheada
+                                </h4>
+                                <p>
+                                    Tapioca preparada na hora com recheio.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 18,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Cuscuz Recheado
+                                </h4>
+
+                                <p>
+                                    Cuscuz nordestino com recheio especial.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 19,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Pastel Regional
+                                </h4>
+
+                                <p>
+                                    Pastel crocante com recheio saboroso.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 12,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Cachorro-quente Regional
+                                </h4>
+
+                                <p>
+                                    Pão macio com recheio e acompanhamentos.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 15,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- PORÇÕES -->
+        <section id="porcoes" class="categoria-cardapio">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">04</span>
+
+                <div>
+                    <span class="subtitulo-categoria">PARA COMPARTILHAR</span>
+
+                    <h2>
+                        Porções
+                    </h2>
+
+                    <p>
+                        Boas conversas combinam com boas porções.
+                    </p>
+                </div>
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/dadinho-de-tapioca.jpg"
+                        alt="Porções para compartilhar"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">VAMOS COMPARTILHAR?</span>
+                </div>
+
+                <div class="lista-categoria">
+                    <div class="titulo-lista">
+                        <h3>
+                            Nossas porções
+                        </h3>
+
+                        <span>IDEAIS PARA COMPARTILHAR</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Macaxeira Frita
+                                </h4>
+
+                                <p>
+                                    Porção de macaxeira dourada e crocante.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 19,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Queijo Coalho Grelhado
+                                </h4>
+
+                                <p>
+                                    Queijo coalho grelhado na hora.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 22,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Carne de Sol Acebolada
+                                </h4>
+
+                                <p>
+                                    Carne de sol com cebola e acompanhamentos.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 36,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Torresmo Crocante
+                                </h4>
+
+                                <p>
+                                    Crocante por fora, macio por dentro.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 24,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Dadinho de Tapioca
+                                </h4>
+
+                                <p>
+                                    Cheios de sabor a cada mordida.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 24,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- SOBREMESAS -->
+        <section id="sobremesas" class="categoria-cardapio">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">05</span>
+
+                <div>
+                    <span class="subtitulo-categoria">UM DOCE FINAL</span>
+
+                    <h2>
+                        Sobremesas
+                    </h2>
+
+                    <p>
+                        Doces que trazem aquele gostinho de tradição.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/cartola-nordestina.jpg"
+                        alt="Sobremesas típicas brasileiras"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">FEITO COM CARINHO</span>
+                </div>
+
+                <div class="lista-categoria">
+                    <div class="titulo-lista">
+                        <h3>
+                            Doces da casa
+                        </h3>
+
+                        <span>PARA ADOÇAR SEU DIA</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Bolo de Rolo
+                                </h4>
+
+                                <p>
+                                    Doce tradicional em finas camadas.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 12,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Cocada Caseira
+                                </h4>
+
+                                <p>
+                                    Doce de coco inspirado nas receitas regionais.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 8,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Pudim da Casa
+                                </h4>
+
+                                <p>
+                                    Pudim cremoso com calda de caramelo.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 10,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Cartola Nordestina
+                                </h4>
+
+                                <p>
+                                    Uma combinação irresistível de banana carameliza.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 10,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Canjica Nordestina
+                                </h4>
+
+                                <p>
+                                    Cremosa e docinha, trazendo o aconchego das festas juninas.
+                                </p>
+                            </div>
+
+                            <span class="preco-produto">R$ 9,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- BEBIDAS -->
+        <section id="bebidas" class="categoria-cardapio">
+
+            <div class="cabecalho-categoria">
+                <span class="numero-categoria">06</span>
+
+                <div>
+                    <span class="subtitulo-categoria">PARA ACOMPANHAR</span>
+
+                    <h2>
+                        Bebidas
+                    </h2>
+
+                    <p>
+                        Refresque seu momento com nossas bebidas.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="painel-categoria">
+                <div class="foto-categoria">
+                    <img
+                        src="img/suco-de-caja.jpg"
+                        alt="Bebidas refrescantes"
+                        loading="lazy"
+                    >
+
+                    <span class="selo-foto">REFRESCÂNCIA</span>
+                </div>
+
+                <div class="lista-categoria">
+                    <div class="titulo-lista">
+                        <h3>
+                            Nossas bebidas
+                        </h3>
+
+                        <span>PARA TODOS OS MOMENTOS</span>
+                    </div>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Suco Laranja
+                                </h4>
+                            </div>
+
+                            <span class="preco-produto">R$ 9,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Suco Cajá
+                                </h4>
+                            </div>
+
+                            <span class="preco-produto">R$ 9,90</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Refrigerante
+                                </h4>
+                            </div>
+
+                            <span class="preco-produto">R$ 7,00</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Água Mineral
+                                </h4>
+                            </div>
+
+                            <span class="preco-produto">R$ 4,00</span>
+                        </div>
+
+                    </article>
+
+                    <article class="produto-cardapio">
+
+                        <div class="produto-resumo">
+                            <div>
+                                <h4>
+                                    Água de Coco
+                                </h4>
+                            </div>
+
+                            <span class="preco-produto">R$ 8,90</span>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- CHAMADA FINAL -->
+        <section class="chamada-final-cardapio">
+
+            <span class="etiqueta-cardapio">SUA PRÓXIMA REFEIÇÃO COMEÇA AQUI</span>
+
+            <h2>
+                Sentiu o gostinho do Nordeste?
+            </h2>
+
+            <p>
+                Escolha seus favoritos e venha aproveitar
+                os sabores do Raízes do Nordeste!
+            </p>
+
+            <a href="pedidos.html" class="botao-explorar">FAZER MEU PEDIDO</a>
+
+        </section>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== -->
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html"> Início do Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== --> 
+<script src="menu.js"></script>
+<script src="verificar-unidade.js"></script>
+
+</body>
+</html>

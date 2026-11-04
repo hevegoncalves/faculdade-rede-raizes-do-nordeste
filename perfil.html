@@ -1,0 +1,318 @@
+<!-- ============================
+        TELA - PERFIL
+================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body class="pagina-perfil">
+
+    <header class="cabecalho cabecalho-perfil">
+
+        <a href="index.html" class="marca">
+            <img 
+                src="img/logo.png" 
+                alt="Raízes do Nordeste"
+                class="logo"
+            >
+            
+            <span class="nome-marca">RAÍZES DO NORDESTE</span>
+        </a>
+
+        <nav>
+
+            <a href="index.html">Início</a>
+            <a href="pedidos.html">Cardápio</a>
+
+            <button 
+                type="button" 
+                id="botao-sair"
+            >
+                Sair da conta
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main class="perfil-container">
+
+        <section class="boas-vindas">
+
+            <p class="texto-destaque">
+                BEM-VINDO(A) À REDE RAÍZES
+            </p>
+
+            <h1>
+                Olá, 
+                <span id="nome-cliente">cliente</span>!
+            </h1>
+
+            <p>
+                Que bom ter você por aqui!
+                Acompanhe seus dados e continue aproveitando
+                os sabores do nosso Nordeste.
+            </p>
+            
+        </section>
+
+        <section class="cartao-carrinho">
+
+            <div class="icone-carrinho" aria-hidden="true">
+                🛒
+            </div>
+
+            <div class="informacoes-carrinho">
+                <h2>
+                    Seu carrinho está esperando!
+                </h2>
+
+                <p id="quantidade-carrinho">
+                    Você ainda não adicionou produtos.
+                </p>
+
+                <p>
+                    Seus sabores favoritos estão a poucos passos
+                    de chegar até você.
+                </p>
+            </div>
+
+            <a href="finalizar-pedido.html" class="botao-carrinho">CONFERIR MEU CARRINHO</a>
+
+        </section>
+
+        <section class="dados-perfil">
+
+            <h2>
+                Meus dados
+            </h2>
+
+            <p class="texto-secao">
+                Confira as informações da sua conta.
+            </p>
+
+            <div class="campo-perfil">
+                <span>Nome completo</span>
+
+                <p id="perfil-nome">
+                    Não informado
+                </p>
+            </div>
+
+            <div class="campo-perfil">
+                <span>E-mail</span>
+
+                <p id="perfil-email">
+                    Não informado
+                </p>
+            </div>
+
+            <div class="campo-perfil">
+                <span>Telefone</span>
+
+                <p id="perfil-telefone">
+                    Não informado
+                </p>
+            </div>
+
+            <h2 class="titulo-endereco-perfil">
+                Meu endereço cadastrado
+            </h2>
+
+            <div class="campo-perfil">
+                <span>Endereço de entrega</span>
+
+                <p id="perfil-endereco">
+                    Não informado
+                </p>
+            </div>
+
+            <p class="aviso-endereco">
+                Você poderá confirmar ou alterar o endereço
+                antes de concluir seu pedido.
+            </p>
+
+        </section>
+
+<!-- ===== PROGRAMA DE FIDELIDADE ====== -->
+        <section class="area-fidelidade" id="area-fidelidade">
+
+            <h2>
+                Sabores que Premiam
+            </h2>
+
+            <p class="texto-secao">
+                A cada compra, você fica mais perto de ganhar
+                benefícios especiais!
+            </p>
+
+<!-- area para clientes que ainda não participam -->
+            <div id="adesao-fidelidade">
+                <p>
+                    Participe do nosso programa de fidelidade
+                    e acumule pontos para trocar por descontos
+                    em seus próximos pedidos.
+                </p>
+
+                <p>
+                    A cada R$ 1,00 gasto em pedidos entregues,
+                    você recebe 1 ponto.
+                </p>
+
+                <label class="aceite-fidelidade">
+
+                    <input
+                        type="checkbox"
+                        id="aceitar-fidelidade"
+                    >
+
+                    <span>Aceito participar do programa de fidelidadeSabores que Premiam e concordo com suas regras.</span>
+
+                </label>
+
+                <button
+                    type="button"
+                    id="botao-aderir-fidelidade"
+                    disabled
+                >
+                    PARTICIPAR DO PROGRAMA
+                </button>
+
+                <p
+                    id="mensagem-adesao-fidelidade"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+                <a href="fidelidade.html">Conheça todas as regras do programa.</a>
+            </div>
+
+<!-- area para clientes que já participam do programa -->
+            <div id="painel-fidelidade" hidden>
+                <p class="status-fidelidade">
+                    Você participa do programa Sabores que Premiam!
+                </p>
+
+                <div class="cartao-pontos">
+                    <span>SEUS PONTOS DISPONÍVEIS</span>
+
+                    <strong id="pontos-perfil">0</strong>
+
+                    <p>
+                        Continue comprando e acumulando pontos!
+                    </p>
+                </div>
+
+                <div class="informacoes-fidelidade">
+                    <h3>
+                        Como utilizar seus pontos?
+                    </h3>
+
+                    <p>
+                        100 pontos = R$ 5,00 de desconto.
+                    </p>
+
+                    <p>
+                        200 pontos = R$ 10,00 de desconto.
+                    </p>
+
+                    <p>
+                        300 pontos = R$ 15,00 de desconto.
+                    </p>
+                </div>
+
+                <a href="fidelidade.html">Consulte as regras do programa.</a>
+            </div>
+
+        </section>
+
+        <section class="area-pedidos">
+
+            <p id="mensagem-pedidos">
+                Seus pedidos realizados aparecerão aqui.
+            </p>
+
+        </section>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== -->
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== --> 
+<script src="menu.js"></script>
+<script src="perfil.js"></script>
+
+</body>
+</html>

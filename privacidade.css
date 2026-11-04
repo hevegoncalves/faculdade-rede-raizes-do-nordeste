@@ -1,0 +1,497 @@
+/*============================================  
+        TELA - TERMO DE PRIVACIDADE
+==============================================*/ 
+
+/* --------------------------------- */ 
+/* =====CONFIGURAÇÕES GERAIS ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+
+    background-color: var(--cor-fundo);
+    background-image:
+        linear-gradient(
+            rgba(49, 33, 33, 0.35),
+            rgba(49, 33, 33, 0.35)
+        ),
+        url("img/fundo-restaurante.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho {
+    width: 100%;
+    background-color: var(--cor-marrom);
+    padding: 15px 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho-conteudo {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: var(--cor-creme);
+
+    flex-shrink: 0;
+}
+
+.marca img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.nome-marca {
+    max-width: 150px;
+
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.menu-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.link-navegacao {
+    position: relative;
+
+    color: var(--cor-creme);
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: color var(--transicao);
+}
+
+.link-navegacao:hover {
+    color: var(--cor-creme-escuro);
+}
+
+.link-navegacao:focus-visible,
+.link-cadastro:focus-visible,
+.botao-voltar:focus-visible,
+.rodape a:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 4px;
+}
+
+.link-cadastro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+    border-radius: 8px;
+
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background-color var(--transicao),
+        transform var(--transicao);
+}
+
+.link-cadastro:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-2px);
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+.pagina-privacidade {
+    flex: 1;
+    width: 100%;
+
+    padding: 50px 24px 70px;
+
+    background-color: var(--cor-fundo);
+}
+
+.secao-privacidade {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 55px 60px;
+
+    background-color: var(--cor-creme-escuro);
+
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 24px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.conteudo-privacidade {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.texto-destaque {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--cor-marrom-escuro);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.conteudo-privacidade h1 {
+    margin-bottom: 25px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: var(--cor-marrom);
+
+    text-align: center;
+}
+
+.introducao-privacidade {
+    max-width: 800px;
+    margin: 0 auto 40px;
+
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ----------------------------------- */ 
+/* ===== SESSÕES DE POLITICA ===== */ 
+.item-privacidade {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(109, 74, 62, 0.2);
+}
+
+.item-privacidade h2,
+.aviso-privacidade h2 {
+    margin-bottom: 12px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: var(--cor-marrom-escuro);
+}
+
+.item-privacidade p,
+.aviso-privacidade p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--cor-texto);
+}
+
+.aviso-privacidade {
+    margin-top: 15px;
+    padding: 25px;
+
+    background-color: rgba(172, 127, 94, 0.12);
+
+    border-left: 5px solid var(--cor-laranja);
+    border-radius: 8px;
+}
+
+.aviso-privacidade h2 {
+    font-size: 26px;
+}
+
+.aviso-privacidade p {
+    font-size: 16px;
+}
+
+.atualizacao-privacidade {
+    margin-top: 25px;
+
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+
+    color: var(--cor-marrom);
+}
+
+/* ----------------------------------- */ 
+/* ===== BOTÃO VOLTAR ===== */ 
+.botao-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 35px auto 0;
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+
+    transition:
+        background-color var(--transicao),
+        transform var(--transicao);
+}
+
+.botao-voltar:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-2px);
+}
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape {
+    width: 100%;
+
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-texto);
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 5%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+}
+
+.rodape-marca img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.rodape-marca p {
+    max-width: 280px;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links h2 {
+    margin-bottom: 5px;
+
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+
+    color: var(--cor-marrom);
+}
+
+.rodape-links a {
+    color: var(--cor-texto);
+    font-size: 15px;
+    text-decoration: none;
+
+    transition: color var(--transicao);
+}
+
+.rodape-links a:hover {
+    color: var(--cor-laranja-escuro);
+    text-decoration: underline;
+}
+
+.rodape-final {
+    padding: 18px 20px;
+
+    background-color: var(--cor-marrom);
+    color: var(--cor-branco);
+
+    border-top: 1px solid var(--cor-branco);
+
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------- */ 
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */ 
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 15px 3%;
+    }
+
+    .secao-privacidade {
+        padding: 45px 35px;
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .cabecalho {
+        padding: 15px 20px;
+    }
+
+    .marca img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nome-marca {
+        font-size: 23px;
+    }
+
+    .menu-navegacao {
+        display: none;
+    }
+
+    .link-navegacao {
+        font-size: 14px;
+    }
+
+    .link-cadastro {
+        padding: 9px 13px;
+        font-size: 14px;
+    }
+
+    .pagina-privacidade {
+        padding: 25px 14px 40px;
+    }
+
+    .secao-privacidade {
+        padding: 32px 22px;
+        border-radius: 18px;
+    }
+
+    .conteudo-privacidade h1 {
+        font-size: 38px;
+    }
+
+    .introducao-privacidade {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .item-privacidade {
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+    }
+
+    .item-privacidade h2 {
+        font-size: 25px;
+    }
+
+    .item-privacidade p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .aviso-privacidade {
+        padding: 20px 16px;
+    }
+
+    .aviso-privacidade h2 {
+        font-size: 24px;
+    }
+
+    .aviso-privacidade p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .botao-voltar {
+        width: 100%;
+        padding: 13px 16px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 25px;
+    }
+
+    .rodape-marca {
+        text-align: center;
+    }
+
+    .rodape-marca img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rodape-marca p {
+        margin: 0 auto;
+    }
+
+    .rodape-links {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-final {
+        padding: 16px;
+        font-size: 12px;
+    }
+}

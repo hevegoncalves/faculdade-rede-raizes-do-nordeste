@@ -1,0 +1,79 @@
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	new file:   raizes-do-nordeste/Site/acompanhar-pedido.css
+	new file:   raizes-do-nordeste/Site/acompanhar-pedido.html
+	new file:   raizes-do-nordeste/Site/acompanhar-pedido.js
+	new file:   raizes-do-nordeste/Site/cadastro.css
+	new file:   raizes-do-nordeste/Site/cadastro.html
+	new file:   raizes-do-nordeste/Site/cadastro.js
+	new file:   raizes-do-nordeste/Site/cardapio.css
+	new file:   raizes-do-nordeste/Site/cardapio.html
+	new file:   raizes-do-nordeste/Site/confirma-pedido.css
+	new file:   raizes-do-nordeste/Site/confirma-pedido.html
+	new file:   raizes-do-nordeste/Site/confirma-pedido.js
+	new file:   raizes-do-nordeste/Site/fidelidade.css
+	new file:   raizes-do-nordeste/Site/fidelidade.html
+	new file:   raizes-do-nordeste/Site/finalizar-pedido.css
+	new file:   raizes-do-nordeste/Site/finalizar-pedido.html
+	new file:   raizes-do-nordeste/Site/finalizar-pedido.js
+	new file:   raizes-do-nordeste/Site/img/1 - DIAGRAMA DE CASOS DE USO.pdf
+	new file:   raizes-do-nordeste/Site/img/Acaraje.jpg
+	new file:   raizes-do-nordeste/Site/img/Moqueca.jpg
+	new file:   raizes-do-nordeste/Site/img/agua-de-coco.jpg
+	new file:   raizes-do-nordeste/Site/img/agua.jpg
+	new file:   raizes-do-nordeste/Site/img/apresentacao.png
+	new file:   raizes-do-nordeste/Site/img/baiao-de-dois.jpg
+	new file:   raizes-do-nordeste/Site/img/bolo-de-rolo.jpg
+	new file:   raizes-do-nordeste/Site/img/cabecalho.png
+	new file:   raizes-do-nordeste/Site/img/cachorro-quente-regional.jpg
+	new file:   raizes-do-nordeste/Site/img/canjica.jpg
+	new file:   raizes-do-nordeste/Site/img/carne-de-sol-acebolado.jpg
+	new file:   raizes-do-nordeste/Site/img/carne-de-sol.jpg
+	new file:   raizes-do-nordeste/Site/img/cartola-nordestina.jpg
+	new file:   raizes-do-nordeste/Site/img/cocada-caseira.jpg
+	new file:   raizes-do-nordeste/Site/img/cuscuz.jpg
+	new file:   raizes-do-nordeste/Site/img/dadinho-de-tapioca.jpg
+	new file:   raizes-do-nordeste/Site/img/entrada-restaurante.png
+	new file:   raizes-do-nordeste/Site/img/escondidinho.jpg
+	new file:   raizes-do-nordeste/Site/img/fidelidade.png
+	new file:   raizes-do-nordeste/Site/img/fidelidade2.png
+	new file:   raizes-do-nordeste/Site/img/galinhada.jpg
+	new file:   raizes-do-nordeste/Site/img/logo.png
+	new file:   raizes-do-nordeste/Site/img/macaxera-frita.jpg
+	new file:   raizes-do-nordeste/Site/img/pastel-regional.jpg
+	new file:   raizes-do-nordeste/Site/img/promocao.jpg
+	new file:   raizes-do-nordeste/Site/img/promocao2.jpg
+	new file:   raizes-do-nordeste/Site/img/pudim.jpg
+	new file:   raizes-do-nordeste/Site/img/queijo-coalho.jpg
+	new file:   raizes-do-nordeste/Site/img/refrugerante.jpg
+	new file:   raizes-do-nordeste/Site/img/sanduiche-de-sol.png
+	new file:   raizes-do-nordeste/Site/img/suco-de-caja.jpg
+	new file:   raizes-do-nordeste/Site/img/suco-de-laranja.jpg
+	new file:   raizes-do-nordeste/Site/img/tapioca-recheada.jpg
+	new file:   raizes-do-nordeste/Site/img/torresmo-crocante.jpg
+	new file:   raizes-do-nordeste/Site/index.html
+	new file:   raizes-do-nordeste/Site/menu.js
+	new file:   raizes-do-nordeste/Site/pedidos.css
+	new file:   raizes-do-nordeste/Site/pedidos.html
+	new file:   raizes-do-nordeste/Site/pedidos.js
+	new file:   raizes-do-nordeste/Site/perfil.css
+	new file:   raizes-do-nordeste/Site/perfil.html
+	new file:   raizes-do-nordeste/Site/perfil.js
+	new file:   raizes-do-nordeste/Site/privacidade.css
+	new file:   raizes-do-nordeste/Site/privacidade.html
+	new file:   raizes-do-nordeste/Site/restaurante.css
+	new file:   raizes-do-nordeste/Site/restaurante.html
+	new file:   raizes-do-nordeste/Site/restaurante.js
+	new file:   raizes-do-nordeste/Site/style.css
+	new file:   raizes-do-nordeste/Site/unidades.css
+	new file:   raizes-do-nordeste/Site/unidades.html
+	new file:   raizes-do-nordeste/Site/unidades.js
+	new file:   raizes-do-nordeste/Site/verificar-unidade.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	resultado.txt
+

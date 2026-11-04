@@ -1,0 +1,231 @@
+<!-- ==================================================
+        TELA - CONFIRMAR PEDIDO
+======================================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conferir Pedido | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confirma-pedido.css">
+
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho cabecalho-confirmacao">
+
+        <a href="index.html" class="marca">
+            <img 
+                src="img/logo.png" 
+                alt="Logo Raízes do Nordeste" 
+                class="logo"
+            >
+            <span class="nome-marca">RAÍZES DO NORDESTE</span>
+        </a>
+
+        <div class="titulo-cabecalho">
+            <h1>
+                Confirmação do pedido
+            </h1>
+
+            <p>
+                Revise seus dados antes de finalizar sua compra.
+            </p>
+        </div>
+
+    </header>
+
+<!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="pagina-confirmacao">
+
+        <h2>
+            Confirme seus dados antes de finalizar o pedido
+        </h2>
+
+<!-- ===== RESUMO DOS PRODUTOS ===== -->
+        <section class="resumo-produtos">
+
+            <h3>
+                Resumo dos produtos
+            </h3>
+
+            <div id="lista-resumo-produtos">
+<!-- Os produtos serão inseridos pelo JavaScript. -->
+            </div>
+
+        </section>
+
+<!-- ===== RESUMO DOS VALORES ===== -->
+        <section class="resumo-valores">
+
+            <h3>
+                Resumo da compra
+            </h3>
+
+            <p>
+                Subtotal:
+                <strong id="subtotal-confirmacao">R$ 0,00</strong>
+            </p>
+
+            <p>
+                Taxa de entrega:
+                <strong id="taxa-confirmacao">R$ 0,00</strong>
+            </p>
+
+            <p id="linha-desconto" hidden>
+                Desconto:
+                <strong id="desconto-confirmacao">R$ 0,00</strong>
+            </p>
+
+            <p class="valor-total">
+                Total:
+                <strong id="total-confirmacao">R$ 0,00</strong>
+            </p>
+
+        </section>
+
+<!-- ===== UNIDADE RESPONSÁVEL ===== -->
+        <section class="resumo-unidade">
+
+            <h3>
+                Unidade responsável pelo pedido
+            </h3>
+
+            <p>
+                Unidade:
+                <strong id="unidade-confirmacao">Não informada</strong>
+            </p>
+
+        </section>
+
+<!-- ===== DADOS PARA ENTREGA ===== -->
+        <section class="resumo-entrega">
+
+            <h3>
+                Dados para entrega
+            </h3>
+
+            <p>
+                Cliente:
+                <strong id="nome-confirmacao">Não informado</strong>
+            </p>
+
+            <p>
+                Endereço:
+                <strong id="endereco-confirmacao">Não informado</strong>
+            </p>
+
+        </section>
+
+<!-- ===== FORMA DE PAGAMENTO ===== -->
+        <section class="resumo-pagamento">
+
+            <h3>
+                Forma de pagamento
+            </h3>
+
+            <p>
+                <strong id="pagamento-confirmacao">Não selecionado</strong>
+            </p>
+
+        </section>
+
+<!-- ===== MENSAGEM DE CONFIRMAÇÃO ===== -->
+        <p id="mensagem-confirmacao" role="status" aria-live="polite"></p>
+
+        <!-- ===== BOTÕES ===== -->
+        <div class="botoes-confirmacao">
+            <button
+                type="button"
+                id="botao-voltar-carrinho"
+            >
+                Alterar algo no carrinho
+            </button>
+
+            <button
+                type="button"
+                id="botao-confirmar-compra"
+            >
+                Confirmar compra
+            </button>
+        </div>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== -->
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="confirma-pedido.js"></script>
+
+</body>
+</html>
