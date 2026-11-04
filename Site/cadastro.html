@@ -1,0 +1,467 @@
+<!-- ===============================================
+        TELA - CADASTRO E ACESSO A CONTA  DO CLIENTE
+===================================================== -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acesso do Cliente | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body class="pagina-acesso">
+
+    <main class="acesso-container">
+
+<!-- ===== ACESSO AO CADASTRO/CRIAÇÃO DE CONTA/ESQUECI MINHA SENHA ===== -->
+<!-- Lado esquedo: imagem do restaurante -->
+        <section class="acesso-imagem">
+
+            <a href="index.html" class="logo-acesso">
+                <img 
+                    src="img/logo.png" 
+                    alt="Raízes do Nordeste"
+                >
+            </a>
+
+            <div class="mensagem-imagem">
+                <h1>
+                    Sabores que acolhem.
+                </h1>
+
+                <p>
+                    Entre agora para descobrir nossos sabores,
+                    acompanhar seus pedidos e aproveitar
+                    os benefícios de pontos da Rede Raízes do Nordeste.
+                </p>
+            </div>
+
+        </section>
+
+<!-- Lado direito: formulários -->
+        <section class="acesso-conteudo">
+
+            <a href="index.html" class="voltar-inicio">← Voltar ao início</a>
+
+<!-- FORMULÁRIO DE LOGIN -->
+            <div class="formulario-acesso" id="formulario-login">
+                <h2>
+                    Bem-vindo de volta!
+                </h2>
+
+                <p class="texto-introducao">
+                    Acesse a sua conta para continuar.
+                </p>
+
+                <form id="form-login">
+
+                    <div class="campo-formulario">
+                        <label for="login-email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="login-senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="login-senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="esqueci-senha">
+                        <a href="#" id="link-esqueci-senha">Esqueceu sua senha?</a>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="botao-acesso"
+                    >
+                        ENTRAR
+                    </button>
+
+                </form>
+
+                <div class="separador">
+                    <span>OU</span>
+                </div>
+
+                <div class="criar-conta-convite">
+                    <h3>
+                        Ainda não tem uma conta?
+                    </h3>
+
+                    <p>
+                        Crie sua conta para continuar com seu pedido
+                        e acompanhar seus benefícios.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-criar-conta"
+                        id="mostrar-cadastro"
+                    >
+                        CRIAR CONTA
+                    </button>
+                </div>
+            </div>
+
+<!-- FORMULÁRIO DE RECUPERAÇÃO DE SENHA -->
+            <div class="formulario-acesso" id="formulario-recuperacao" hidden>
+                <h2>
+                    Recuperar senha
+                </h2>
+
+                <p class="texto-introducao">
+                    Informe o e-mail utilizado no seu cadastro 
+                    para recuperar o acesso à sua conta.
+                </p>
+
+                <form id="form-recuperacao">
+
+                    <div class="campo-formulario">
+                        <label for="recuperacao-email">E-mail cadastrado</label>
+
+                        <input
+                            type="email"
+                            id="recuperacao-email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="botao-acesso"
+                    >
+                        RECUPERAR SENHA
+                    </button>
+
+                </form>
+
+                <div class="voltar-login">
+                    <p>
+                        Lembrou sua senha?
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-voltar-login"
+                        id="voltar-login-recuperacao"
+                    >
+                        VOLTAR PARA O LOGIN
+                    </button>
+                </div>
+            </div>
+
+<!-- FORMULÁRIO DE CADASTRO -->
+            <div class="formulario-acesso" id="formulario-cadastro" hidden>
+                <h2>
+                    Crie sua conta
+                </h2>
+
+                <p class="texto-introducao">
+                    Faça seu cadastro e aproveite nossos sabores.
+                </p>
+
+                <form id="form-cadastro">
+
+                    <div class="campo-formulario">
+                        <label for="cadastro-nome">Nome completo</label>
+
+                        <input
+                            type="text"
+                            id="cadastro-nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="cadastro-email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="cadastro-email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <div class="campos-telefone">
+                            <div class="campo-formulario campo-ddi">
+                                <label for="cadastro-ddi">DDI</label>
+
+                                <input
+                                    type="tel"
+                                    id="cadastro-ddi"
+                                    name="ddi"
+                                    value="+55"
+                                    maxlength="4"
+                                    inputmode="tel"
+                                    autocomplete="tel-country-code"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo-formulario campo-ddd">
+                                <label for="cadastro-ddd">DDD</label>
+
+                                <input
+                                    type="tel"
+                                    id="cadastro-ddd"
+                                    name="ddd"
+                                    placeholder="41"
+                                    maxlength="2"
+                                    inputmode="numeric"
+                                    autocomplete="tel-area-code"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo-formulario campo-numero">
+                                <label for="cadastro-telefone">Telefone</label>
+
+                                <input
+                                    type="tel"
+                                    id="cadastro-telefone"
+                                    name="telefone"
+                                    placeholder="99999-9999"
+                                    maxlength="10"
+                                    inputmode="numeric"
+                                    autocomplete="tel-national"
+                                    required
+                                >
+                            </div>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="cadastro-senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="cadastro-senha"
+                            name="senha"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="confirmar-senha">
+                            Confirmar senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmar-senha"
+                            name="confirmar-senha"
+                            placeholder="Digite a senha novamente"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="secao-endereco">
+                        <h3 class="titulo-endereco">
+                            Endereço de entrega
+                        </h3>
+
+                        <p class="texto-endereco">
+                            Informe seu endereço para facilitar a 
+                            entrega dos seus pedidos.
+                        </p>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-cep">CEP</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-cep"
+                                name="cep"
+                                placeholder="00000-000"
+                                maxlength="9"
+                                autocomplete="postal-code"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-estado">Estado (UF)</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-estado"
+                                name="estado"
+                                placeholder="Ex.: PR"
+                                maxlength="2"
+                                autocomplete="address-level1"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-cidade">Cidade</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-cidade"
+                                name="cidade"
+                                placeholder="Digite sua cidade"
+                                autocomplete="address-level2"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-bairro">Bairro</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-bairro"
+                                name="bairro"
+                                placeholder="Digite seu bairro"
+                                autocomplete="address-level3"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-rua">Rua / Avenida</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-rua"
+                                name="rua"
+                                placeholder="Digite o nome da rua ou avenida"
+                                autocomplete="address-line1"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-numero">Número</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-numero"
+                                name="numero"
+                                placeholder="Número do imóvel"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-complemento">Complemento (opcional)</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-complemento"
+                                name="complemento"
+                                placeholder="Apartamento, bloco, casa..."
+                                autocomplete="address-line2"
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="cadastro-referencia">Ponto de referência (opcional)</label>
+
+                            <input
+                                type="text"
+                                id="cadastro-referencia"
+                                name="referencia"
+                                placeholder="Ex.: próximo à praça"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="aceite-privacidade">
+                        <input
+                            type="checkbox"
+                            id="aceite-privacidade"
+                            name="aceite-privacidade"
+                            required
+                        >
+
+                        <label for="aceite-privacidade">
+                            Li e aceito a
+                            <a href="privacidade.html">
+                                Política de Privacidade
+                            </a>.
+                        </label>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="botao-acesso"
+                    >
+                        CRIAR MINHA CONTA
+                    </button>
+
+                </form>
+
+                <div class="voltar-login">
+                    <p>
+                        Já tem uma conta?
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-voltar-login"
+                        id="mostrar-login"
+                    >
+                        ENTRAR NA MINHA CONTA
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="cadastro.js"></script>
+
+</body>
+</html>

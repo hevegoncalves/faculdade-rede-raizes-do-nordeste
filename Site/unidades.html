@@ -1,0 +1,262 @@
+<!-- ============================
+        TELA - UNIDADES
+================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escolha sua unidade | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="unidades.css">
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="marca">
+                <img 
+                    src="img/logo.png" 
+                    alt="Logo Raízes do Nordeste" 
+                    class="logo"
+                >
+
+                <span class="nome-marca">RAÍZES DO NORDESTE</span>
+            </a>
+
+<!-- botão menu -->
+            <button
+                class="botao-menu"
+                id="botaoMenu"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menuNavegacao"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-navegacao" id="menuNavegacao" aria-label="Menu principal">
+
+                <a href="index.html" class="link-navegacao">Início</a>
+                <a href="unidades.html" class="link-navegacao ativo" aria-current="page">Unidades</a>
+                <a href="cadastro.html" class="link-navegacao">Entrar</a>
+                <a href="cardapio.html" class="link-navegacao">Cardápio</a>
+
+            </nav>
+        </div>
+
+    </header>
+
+<!-- ===== CONTEUDO PRINCIPAL ===== -->
+    <main>
+
+        <section class="secao-unidades">
+
+            <div class="container">
+<!-- Titulo da pagina -->
+                <div class="unidades-introducao">
+                    <span class="unidades-etiqueta">TEM UM PEDACINHO DO NORDESTE PERTO DE VOCÊ</span>
+
+                    <h1>
+                        Nossas unidades
+                    </h1>
+
+                    <p>
+                        Escolha onde deseja fazer seu pedido
+                        e descubra os sabores que preparamos para você.
+                    </p>
+                </div>
+
+<!-- foto principal -->
+                <div class="unidades-banner">
+                    <img
+                        src="img/entrada-restaurante.png"
+                        alt="Entrada Raízes do Nordeste"
+                        class="unidades-banner-logo"
+                    >
+                </div>
+
+<!-- titulo da região (Curitiba) -->
+                <div class="unidades-regiao">
+                    <h2>
+                        Curitiba
+                    </h2>
+
+                    <span></span>
+                </div>
+
+<!-- unidades -->
+                <div class="lista-unidades">
+                    <article class="cartao-unidade">
+
+                        <h2>
+                            Unidade Centro
+                        </h2>
+
+                        <p class="unidade-endereco">
+                            Rua XV de Novembro, 120 — Centro
+                        </p>
+
+                        <p class="unidade-horario">
+                            <strong>Funcionamento:</strong><br>
+                            Todos os dias, das 11h às 15h
+                        </p>
+
+                        <button class="botao-unidade" type="button" data-unidade="Centro">
+                            FAZER O PEDIDO NESTA UNIDADE
+                        </button>
+
+                    </article>
+
+                    <article class="cartao-unidade">
+
+                        <h2>
+                            Unidade Batel
+                        </h2>
+
+                        <p class="unidade-endereco">
+                            Avenida do Batel, 450 — Batel
+                        </p>
+
+                        <p class="unidade-horario">
+                            <strong>Funcionamento:</strong><br>
+                            Todos os dias, das 11h às 15h
+                        </p>
+
+                        <button class="botao-unidade" type="button" data-unidade="Batel">
+                            FAZER O PEDIDO NESTA UNIDADE
+                        </button>
+
+                    </article>
+
+                    <article class="cartao-unidade">
+
+                        <h2>
+                            Unidade Água Verde
+                        </h2>
+
+                        <p class="unidade-endereco">
+                            Avenida República Argentina, 850 — Água Verde
+                        </p>
+
+                        <p class="unidade-horario">
+                            <strong>Funcionamento:</strong><br>
+                            Todos os dias, das 11h às 22h
+                        </p>
+
+                        <button class="botao-unidade" type="button" data-unidade="Água Verde">
+                            FAZER O PEDIDO NESTA UNIDADE
+                        </button>
+
+                    </article>
+
+                    <article class="cartao-unidade">
+
+                        <h2>
+                            Unidade Santa Felicidade
+                        </h2>
+
+                        <p class="unidade-endereco">
+                            Avenida Manoel Ribas, 300 — Santa Felicidade
+                        </p>
+
+                        <p class="unidade-horario">
+                            <strong>Funcionamento:</strong><br>
+                            Todos os dias, das 11h às 22h
+                        </p>
+
+                        <button class="botao-unidade" type="button" data-unidade="Santa Felicidade">
+                            FAZER O PEDIDO NESTA UNIDADE
+                        </button>
+
+                    </article>
+                </div>
+
+                <p class="unidades-aviso">
+                    Escolha uma unidade para continuar para o cardápio.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== --> 
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt="Logo Raízes do Nordeste"
+                    class="rodape-logo"
+                >
+
+                <p>
+                    RAÍZES DO NORDESTE
+                </p>
+
+                <span>Tradição e sabor em cada receita.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cadastro.html">Entrar ou cadastrar</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="index.html#sobre">Sobre o Restaurante</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== --> 
+<script src="menu.js"></script>
+<script src="unidades.js"></script>
+
+</body>
+</html>

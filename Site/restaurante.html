@@ -1,0 +1,199 @@
+<!-- ================================================== 
+        TELA - RESTAURANTE
+======================================================= --> 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel do Restaurante | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== --> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="restaurante.css">
+
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL --> 
+    <header class="cabecalho-restaurante">
+
+        <h1>
+            Raízes do Nordeste
+        </h1>
+
+        <p>
+            Painel de gerenciamento de pedidos
+        </p>
+
+    </header>
+
+    <main class="pagina-restaurante">
+
+        <section class="introducao-restaurante">
+
+            <div>
+                <h2>
+                    Pedidos recebidos
+                </h2>
+
+                <p>
+                    Acompanhe e atualize os pedidos de todas as nossas unidades.
+                </p>
+            </div>
+
+            <button type="button" id="botao-atualizar">
+                Atualizar pedidos
+            </button>
+
+        </section>
+
+<!-- Resumo do pedido --> 
+        <section class="resumo-pedidos">
+
+<!-- total -->
+            <article class="cartao-resumo">
+
+                <span>Total de pedidos</span>
+
+                <strong id="total-pedidos">0</strong>
+
+                <small>Todos os pedidos registrados</small>
+
+            </article>
+
+<!-- aguardando restaurante -->
+            <article class="cartao-resumo">
+
+                <span>Aguardando restaurante</span>
+
+                <strong id="pedidos-aguardando">0</strong>
+
+                <small>Novos pedidos</small>
+
+            </article>
+
+<!-- recebidos -->
+            <article class="cartao-resumo">
+
+                <span>Recebidos</span>
+
+                <strong id="pedidos-recebidos">0</strong>
+
+                <small>Confirmados pelo restaurante</small>
+
+            </article>
+
+<!-- em preparo -->
+            <article class="cartao-resumo">
+
+                <span>Em preparo</span>
+
+                <strong id="pedidos-preparo">0</strong>
+
+                <small>Pedidos sendo preparados</small>
+
+            </article>
+
+<!-- em entrega -->
+            <article class="cartao-resumo">
+
+                <span>Em entrega</span>
+
+                <strong id="pedidos-entrega">0</strong>
+
+                <small>Pedidos a caminho</small>
+
+            </article>
+
+<!-- entregues -->
+            <article class="cartao-resumo">
+
+                <span>Entregues</span>
+
+                <strong id="pedidos-entregues">0</strong>
+
+                <small>Pedidos concluídos</small>
+
+            </article>
+
+        </section>
+
+
+<!-- ===== FILTRO DE UNIDADES ===== -->
+        <section class="filtros-pedidos">
+
+            <label for="filtro-unidade">
+                Filtrar por unidade:
+            </label>
+
+            <select id="filtro-unidade">
+
+                <option value="todas">Todas as unidades</option>
+
+                <option value="Centro">Centro</option>
+
+                <option value="Batel">Batel</option>
+
+                <option value="Água Verde">Água Verde</option>
+
+                <option value="Santa Felicidade">Santa Felicidade</option>
+
+            </select>
+
+        </section>
+
+<!-- ===== LISTA DE PEDIDOS =====-->
+        <section class="lista-pedidos">
+
+            <h2>
+                Lista de pedidos
+            </h2>
+
+            <div
+                id="mensagem-pedidos"
+                role="status"
+                aria-live="polite"
+            >
+                Carregando pedidos...
+            </div>
+
+            <div id="container-pedidos"></div>
+
+        </section>
+
+   <!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== --> 
+        <footer class="rodape-restaurante">
+
+            <a href="index.html">
+                Voltar ao início
+            </a>
+
+        </footer>
+
+    </main>
+
+<!-- JAVASCRIPT -->
+<script src="restaurante.js"></script>
+
+</body>
+
+</html>

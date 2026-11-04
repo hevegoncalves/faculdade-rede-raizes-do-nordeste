@@ -1,0 +1,269 @@
+/*======================================== 
+        TELA - UNIDADES
+========================================*/
+
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+.secao-unidades {
+    padding: 65px 0 85px;
+    color: var(--cor-laranja-escuro);
+    background-color: var(--cor-creme-escuro);
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+.unidades-introducao {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 35px;
+}
+
+.unidades-etiqueta {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--cor-laranja);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.unidades-introducao h1 {
+    margin-bottom: 18px;
+
+    color: var(--cor-texto);
+    font-family: var(--fonte-titulo);
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1.1;
+
+    text-transform: uppercase;
+}
+
+.unidades-introducao p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: var(--cor-texto);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.lista-unidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* --------------------------------- */ 
+/* ===== FOTO DO RESTAURANTE ===== */ 
+.unidades-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 1050px);
+    min-height: 200px;
+    margin: 0 auto 55px;
+    padding: 10px 10px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(45, 27, 19, 0.55), 
+            rgba(45, 27, 19, 0.75)
+        ),
+        linear-gradient(135deg, var(--cor-marrom), var(--cor-marrom-escuro));
+    
+        border: 2px solid var(--cor-marrom-claro);
+        border-radius: 4px;
+        box-shadow: 0 15px 30px rgba(75, 48, 39, 0.08);
+}
+
+.unidades-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --------------------------------- */ 
+/* ===== UNIDADES DO RESTAURANTE ===== */ 
+.unidades-regiao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.unidades-regiao span {
+    flex: 1;
+    height: 2px;
+    background-color: var(--cor-texto);
+}
+
+.cartao-unidade {
+    padding: 30px;
+    background-color: var(--cor-marrom-claro);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(75, 48, 39, 0.08);    
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cartao-unidade:hover {
+    border-color: var(--cor-laranja-escuro);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(75, 48, 39, 0.12);
+}
+
+.cartao-unidade h2 {
+    margin-bottom: 12px;
+    color: var(--cor-texto);
+    font-family: var(--fonte-titulo);
+    font-size: 27px;
+}
+
+.unidade-endereco {
+    margin-bottom: 18px;
+    color: var(--cor-creme);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.unidade-horario {
+    margin-bottom: 25px;
+    color: var(--cor-creme-escuro);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.botao-unidade {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: var(--cor-laranja);
+
+    color: var(--cor-creme);
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-unidade:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-2px);
+}
+
+.unidades-aviso {
+    width: min(100% - 40px, 550px);
+    margin-top: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 20px;
+
+    color: var(--cor-marrom-escuro);
+    background-color: var(--cor-creme);
+
+    border-left: 5px solid var(--cor-laranja);
+    border-right: 5px solid var(--cor-laranja);
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape {
+    position: relative;
+    border-top: none;
+}
+
+.rodape::before {
+    content: "";
+    display: block;
+    width: min(95%, 1100px);
+    height: 3px;
+    margin: 0 auto;
+
+    background-color: var(--cor-marrom-escuro);
+}
+
+/* ----------------------- */  
+/* ==== RODAPÉ FINAL===== */  
+.rodape-final {
+    padding: 18px 20px;
+    background-color: var(--cor-marrom);
+    
+    color: var(--cor-branco);
+    border-top: 1px solid var(--cor-branco);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 700px) {
+    .secao-unidades {
+        padding: 45px 0 55px;
+    }   
+
+    .unidades-etiqueta {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    
+    .unidades-introducao {
+        margin-bottom: 28px;
+    }
+
+    .unidades-introducao h1 {
+        font-size: clamp(36px, 9vw, 48px);
+    }
+
+    .unidades-introducao p {
+        font-size: 15px;
+    }
+
+    .unidades-banner {
+        min-height: 160px;
+        margin-bottom: 35px;
+    }
+
+    .unidades-banner img {
+        height: 200px;
+    }
+
+    .lista-unidades {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cartao-unidade {
+        padding: 25px 20px;
+    }
+
+    .cartao-unidade h2 {
+        font-size: 24px;
+    }
+}

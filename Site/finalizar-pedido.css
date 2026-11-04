@@ -1,0 +1,545 @@
+/*============================================ 
+        TELA - FINALIZAR PEDIDO
+==============================================*/
+
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-texto);
+
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+header {
+    background-color: var(--cor-marrom-escuro);
+    color: var(--cor-creme);
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+
+    font-family: var(--fonte-titulo);
+    font-size: 42px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 8px 0 0;
+
+    font-size: 16px;
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+main {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* ----------------------------------- */ 
+/* ===== QUADRO DE CADA ETAPA ===== */
+main section {
+    background-color: var(--cor-branco);
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    border: 1px solid var(--cor-creme);
+    border-radius: 14px;
+
+    box-shadow: 0 4px 12px rgba(73, 51, 41, 0.08);
+}
+
+/* titulo das seções */
+main section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    padding-bottom: 12px;
+
+    color: var(--cor-marrom-escuro);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    border-bottom: 2px solid var(--cor-creme);
+}
+
+
+/* -------------------------------- */ 
+/* ===== COMIDAS QUE FORAM PEDIDAS ===== */
+#lista-produtos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#lista-produtos > div {
+    padding: 16px;
+
+    background-color: var(--cor-fundo);
+
+    border: 1px solid var(--cor-creme);
+    border-radius: 10px;
+}
+
+#lista-produtos h3 {
+    margin: 0 0 8px;
+
+    color: var(--cor-marrom-escuro);
+    font-size: 19px;
+}
+
+#lista-produtos p {
+    margin: 4px 0;
+
+    font-size: 15px;
+}
+
+
+/* --------------------------------------- */ 
+/* ===== MENSAGEM DE CARRINHO VAZIO ===== */
+#mensagem-carrinho-vazio {
+    padding: 20px;
+
+    background-color: var(--cor-fundo);
+
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+#mensagem-carrinho-vazio p {
+    margin-top: 0;
+}
+
+
+/* ------------------------------ */ 
+/* ===== RESUMO DA COMPRA ===== */
+main section p {
+    margin: 12px 0;
+}
+
+main section strong {
+    color: var(--cor-marrom-escuro);
+}
+
+#subtotal,
+#taxa-entrega,
+#desconto-fidelidade {
+    font-weight: 600;
+}
+
+#total-pedido {
+    color: var(--cor-laranja-escuro);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* dados de entrega */
+#mensagem-login {
+    padding: 14px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+}
+
+
+/* ------------------ */ 
+/* ===== BOTÕES ===== */
+button {
+    padding: 13px 20px;
+    margin: 8px 8px 8px 0;
+
+    background-color: var(--cor-marrom);
+    color: var(--cor-branco);
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: var(--fonte-texto);
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--cor-marrom);
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    background-color: var(--cor-creme);
+
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ------------------------------ */ 
+/* ===== DADOS DO CLIENTE ===== */
+#dados-cliente {
+    margin-top: 20px;
+    padding: 16px;
+
+    background-color: var(--cor-branco);
+
+    border: 1px solid var(--cor-creme);
+    border-radius: 10px;
+}
+
+#dados-cliente p {
+    margin: 6px 0;
+}
+
+
+/* ------------------------ */ 
+/* ===== FIDELIDADE ===== */
+#pontos-disponiveis {
+    color: var(--cor-laranja-escuro);
+    font-size: 21px;
+}
+
+#opcao-usar-pontos {
+    display: block;
+
+    margin: 18px 0;
+    padding: 14px;
+    background-color: var(--cor-creme);
+
+    border: 1px solid var(--cor-creme);
+    border-radius: 8px;
+}
+
+#usar-pontos {
+    margin-right: 8px;
+    accent-color: var(--cor-marrom);
+}
+
+
+/* ---------------------------------- */ 
+/* ===== FORMAS DE PAGAMENTO ===== */
+main section label {
+    display: inline-block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color:var(--cor-marrom);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--cor-marrom);
+}
+
+
+/* ---------------------------- */
+/* ===== CAMPOS DO CARTÃO ===== */
+#campos-cartao {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 10px;
+}
+
+#campos-cartao label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: 600;
+}
+
+#campos-cartao input {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: var(--cor-branco);
+
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 7px;
+    font-family: var(--fonte-texto);
+    font-size: 15px;
+}
+
+#campos-cartao input:focus {
+    outline: 2px solid var(--cor-laranja-escuro);
+    outline-offset: 1px;
+    border-color: var(--cor-laranja-escuro);
+}
+
+/* aviso de pagamento */
+main section small {
+    display: block;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: var(--cor-creme);
+
+    color: var(--cor-marrom);
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+#mensagem-pix {
+    margin-top: 18px;
+    padding: 15px;
+    background-color: var(--cor-creme);
+
+    border: 1px solid var(--cor-fundo);
+    border-radius: 10px;
+}
+
+
+/* -------------------------------- */
+/* ===== BOTÃO CONFIRMAR PEDIDO ===== */
+#botao-confirmar-pedido {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 17px 25px;
+    background-color: var(--cor-laranja-escuro);
+
+    color: var(--cor-branco);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#botao-confirmar-pedido:hover {
+    background-color: var(--cor-laranja);
+}
+
+
+/* -------------------------------- */
+/* ===== FORMULÁRIO DE ENDEREÇO ===== */
+#formulario-endereco {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--cor-creme);
+
+    border: 1px solid var(--cor-fundo);
+    border-radius: 10px;
+}
+
+#formulario-endereco h3 {
+    margin-top: 0;
+    color: var(--cor-marrom);
+    font-size: 20px;
+}
+
+.campo-endereco {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo-endereco label {
+    margin-bottom: 6px;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+.campo-endereco input {
+    width: 100%;
+    padding: 12px;
+
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 7px;
+
+    font-family: var(--fonte-texto);
+    font-size: 15px;
+}
+
+.campo-endereco input:focus {
+    outline: 2px solid var(--cor-laranja-escuro);
+    outline-offset: 1px;
+    border-color: var(--cor-laranja-escuro);
+}
+
+#mensagem-endereco {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+#botao-alterar-endereco {
+    background-color: var(--cor-marrom);
+}
+
+#botao-salvar-endereco {
+    background-color: var(--cor-laranja);
+}
+
+#botao-salvar-endereco:hover {
+    background-color: var(--cor-laranja-escuro);
+}
+
+#botao-cancelar-endereco {
+    background-color: var(--cor-creme);
+}
+
+#botao-cancelar-endereco:hover {
+    background-color: var(--cor-marrom-claro);
+}
+
+
+/* -------------------------------- */
+/* MANTEM OCULTO OS ELEMENTOS HIDDEN */
+[hidden] {
+    display: none !important;
+}
+
+
+/* -------------------------------- */
+/* ===== MENSAGENS DO SISTEMA ===== */
+#mensagem-status {
+    text-align: center;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+
+/* ------------------ */
+/* ===== LINKS ===== */
+main a {
+    color: var(--cor-laranja-escuro);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--cor-marrom);
+    text-decoration: underline;
+}
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape {
+    position: relative;
+    border-top: none;
+}
+
+.rodape::before {
+    content: "";
+    display: block;
+    width: min(95%, 1100px);
+    height: 3px;
+    margin: 0 auto;
+
+    background-color: var(--cor-marrom-escuro);
+}
+
+/* ----------------------- */  
+/* ==== RODAPÉ FINAL===== */  
+.rodape-final {
+    padding: 18px 20px;
+    background-color: var(--cor-marrom);
+    
+    color: var(--cor-branco);
+    border-top: 1px solid var(--cor-branco);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 600px) {
+    #formulario-endereco {
+        padding: 15px;
+    }
+
+    .campo-endereco input {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 24px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    main section {
+        padding: 18px;
+        margin-bottom: 18px;
+
+        border-radius: 10px;
+    }
+
+    main section h2 {
+        font-size: 21px;
+    }
+
+    #total-pedido {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+
+        margin: 8px 0;
+    }
+
+    #campos-cartao {
+        padding: 15px;
+    }
+
+    #campos-cartao input {
+        max-width: 100%;
+    }
+
+    #botao-confirmar-pedido {
+        max-width: 100%;
+    }
+}

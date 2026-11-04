@@ -1,0 +1,213 @@
+<!-- ===========================================
+        TELA - ACOMPANHAR PEDIDO
+================================================ -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acompanhar Pedido | Raízes do Nordeste</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS COM O ESTILO DO SITE ===== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="acompanhar-pedido.css">
+</head>
+
+<body>
+
+    <header class="cabecalho-acompanhamento">
+
+        <h1>
+            Raízes do Nordeste
+        </h1>
+
+        <p>
+            Seu sabor nordestino está a caminho!
+        </p>
+
+    </header>
+
+    <main class="pagina-acompanhamento">
+
+        <section class="cabecalho-pedido">
+
+            <h2>
+                Acompanhe seu pedido
+            </h2>
+
+            <p id="numero-pedido">
+                Carregando pedido...
+            </p>
+
+            <p id="mensagem-status" role="status" aria-live="polite">
+                Estamos preparando tudo com carinho!
+            </p>
+
+        </section>
+
+<!-- ANIMAÇÃO DA ETAPA ATUAL -->
+        <section class="animacao-pedido">
+
+            <div id="icone-etapa" class="icone-etapa" aria-hidden="true">
+                🧾
+            </div>
+
+            <h3 id="titulo-etapa">
+                Pedido confirmado
+            </h3>
+
+            <p id="descricao-etapa">
+                Recebemos seu pedido!
+            </p>
+
+        </section>
+
+<!-- ETAPAS DO PEDIDO -->
+        <section class="etapas-pedido">
+
+            <h3>
+                Etapas do pedido
+            </h3>
+
+            <div class="etapa" data-etapa="0">
+                <span class="icone-status">🧾</span>
+
+                <div>
+                    <strong>Pedido confirmado</strong>
+                    <p>Recebemos sua compra.</p>
+                </div>
+
+                <span class="indicador-status">Aguardando</span>
+            </div>
+
+            <div class="etapa" data-etapa="1">
+                <span class="icone-status">👨‍🍳</span>
+
+                <div>
+                    <strong>Preparando seu pedido</strong>
+                    <p>Nossos cozinheiros estão preparando seus pratos.</p>
+                </div>
+
+                <span class="indicador-status">Aguardando</span>
+            </div>
+
+            <div class="etapa" data-etapa="2">
+                <span class="icone-status">🛵</span>
+
+                <div>
+                    <strong>Saiu para entrega</strong>
+                    <p>Seu pedido está a caminho.</p>
+                </div>
+
+                <span class="indicador-status">Aguardando</span>
+            </div>
+
+            <div class="etapa" data-etapa="3">
+                <span class="icone-status">📦</span>
+
+                <div>
+                    <strong>Pedido entregue</strong>
+                    <p>Esperamos que aproveite sua refeição!</p>
+                </div>
+
+                <span class="indicador-status">Aguardando</span>
+            </div>
+
+        </section>
+
+<!-- CONFIRMAÇÃO DE ENTREGA E AVALIAÇÃO -->
+        <section
+            id="area-avaliacao"
+            class="area-avaliacao"
+            hidden
+        >
+
+            <h3>
+                Você recebeu seu pedido?
+            </h3>
+
+            <p>
+                Confirme o recebimento para concluir seu pedido.
+            </p>
+
+            <button
+                type="button"
+                id="botao-confirmar-entrega"
+            >
+                Confirmar recebimento
+            </button>
+
+            <form id="formulario-avaliacao" hidden>
+
+                <h3>
+                    Avalie sua experiência!
+                </h3>
+
+                <label for="nota-avaliacao">
+                    Como foi sua experiência?
+                </label>
+
+                <select id="nota-avaliacao" required>
+                    <option value="">Selecione uma nota</option>
+                    <option value="5">⭐⭐⭐⭐⭐ — Excelente</option>
+                    <option value="4">⭐⭐⭐⭐ — Muito boa</option>
+                    <option value="3">⭐⭐⭐ — Boa</option>
+                    <option value="2">⭐⭐ — Regular</option>
+                    <option value="1">⭐ — Precisa melhorar</option>
+                </select>
+
+                <label for="comentario-avaliacao">
+                    Conte-nos o que achou (opcional)
+                </label>
+
+                <textarea
+                    id="comentario-avaliacao"
+                    rows="3"
+                    maxlength="300"
+                    placeholder="Escreva sua opinião..."
+                ></textarea>
+
+                <button type="submit">
+                    Enviar avaliação
+                </button>
+
+            </form>
+
+            <p
+                id="mensagem-avaliacao"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+        <div class="rodape-acompanhamento">
+            <a href="pedidos.html">
+                Voltar ao cardápio
+            </a>
+        </div>
+
+    </main>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="acompanhar-pedido.js"></script>
+
+</body>
+</html>

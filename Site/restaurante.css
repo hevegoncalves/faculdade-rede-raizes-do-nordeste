@@ -1,0 +1,430 @@
+/* =============================================
+   TELA - RESTAURANTE
+============================================= */
+
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+.pagina-restaurante,
+.pagina-restaurante * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-creme);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho-restaurante {
+    padding: 18px 20px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    text-align: center;
+}
+
+.cabecalho-restaurante h1 {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 34px;
+}
+
+.cabecalho-restaurante p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */
+.pagina-restaurante {
+    width: 94%;
+    max-width: 1150px;
+    margin: 25px auto;
+    padding: 22px;
+    background-color: var(--cor-creme);
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(73, 51, 41, 0.10);
+}
+
+/*-------------------------------- */ 
+/* ===== INTRODUÇÃO ===== */ 
+.introducao-restaurante {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.introducao-restaurante h2 {
+    margin: 0 0 7px;
+    color: var(--cor-marrom-escuro);
+}
+
+.introducao-restaurante p {
+    margin: 0;
+    color: var(--cor-marrom);
+    line-height: 1.5;
+}
+
+/* ----------------- */ 
+/* ==== BOTÕES ===== */ 
+.pagina-restaurante button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--cor-marrom);
+    color: var(--cor-branco);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagina-restaurante button:hover {
+    background-color: var(--cor-marrom);
+}
+
+.pagina-restaurante button:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 3px;
+}
+
+.pagina-restaurante button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ----------------- */ 
+/* ==== RESUMO DOS PEDIDOS ===== */ 
+.resumo-pedidos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.cartao-resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 9px;
+}
+
+.cartao-resumo span {
+    color: var(--cor-marrom-claro);
+    font-size: 13px;
+}
+
+.cartao-resumo strong {
+    color: var(--cor-marrom-escuro);
+    font-size: 27px;
+}
+
+
+/* -------------------------- */    
+/* ==== FILTRO ===== */   
+.filtros-pedidos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-radius: 8px;
+}
+
+.filtros-pedidos label {
+    font-weight: bold;
+}
+
+.filtros-pedidos select {
+    min-width: 190px;
+    padding: 10px;
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 6px;
+    background-color: var(--cor-branco);
+    color: var(--fonte-texto);
+    font: inherit;
+}
+
+
+/* -------------------------- */    
+/* ==== LISTA DE PEDIDOS ===== */  
+.lista-pedidos > h2 {
+    margin-bottom: 15px;
+    color: var(--fonte-texto);
+}
+
+#mensagem-pedidos {
+    margin: 15px 0;
+    color: var(--cor-marrom);
+    line-height: 1.5;
+}
+
+/* cartão pedidos */
+.cartao-pedido {
+    margin-bottom: 18px;
+    padding: 18px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-left: 5px solid var(--cor-laranja);
+    border-radius: 9px;
+}
+
+.cabecalho-cartao-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.cabecalho-cartao-pedido h3 {
+    margin: 0;
+    color: var(--cor-texto);
+}
+
+.unidade-pedido {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--cor-marrom);
+    font-size: 13px;
+}
+
+.status-pedido {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-laranja-escuro);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-pedido.preparo {
+    background-color: var(--cor-fundo);
+    color: var(--cor-marrom);
+}
+
+.status-pedido.entrega {
+    background-color: var(--cor-branco);
+    color: #315b8a;
+}
+
+.status-pedido.entregue {
+    background-color: var(--cor-branco);
+    color: #38652f;
+}
+
+.dados-pedido {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 15px;
+}
+
+.bloco-dados-pedido {
+    padding: 12px;
+    background-color: var(--cor-branco);
+    border-radius: 7px;
+}
+
+.bloco-dados-pedido h4 {
+    margin: 0 0 8px;
+    color: var(--cor-marrom-escuro);
+}
+
+.bloco-dados-pedido p {
+    margin: 5px 0;
+    color: var(--cor-marrom);
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.lista-produtos-pedido {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--cor-marrom);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.total-pedido-restaurante {
+    margin-top: 12px;
+    color: var(--cor-laranja-escuro);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+/* -------------------------- */    
+/* ==== AÇÕES QUE O RESTAURANTE FAZ ===== */  
+.acoes-restaurante {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--cor-creme);
+}
+
+.acoes-restaurante p {
+    width: 100%;
+    margin: 0 0 3px;
+    color: var(--cor-marrom);
+    font-size: 13px;
+}
+
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape-restaurante {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.rodape-restaurante a {
+    color: var(--cor-marrom);
+    font-weight: bold;
+}
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 800px) {
+    .resumo-pedidos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+    .cabecalho-restaurante {
+        padding: 14px;
+    }
+
+    .cabecalho-restaurante h1 {
+        font-size: 28px;
+    }
+
+    .pagina-restaurante {
+        width: 96%;
+        margin: 12px auto;
+        padding: 13px;
+    }
+
+    .introducao-restaurante {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .introducao-restaurante button {
+        width: 100%;
+    }
+
+    .resumo-pedidos {
+        gap: 8px;
+    }
+
+    .cartao-resumo {
+        padding: 12px;
+    }
+
+    .cartao-resumo strong {
+        font-size: 23px;
+    }
+
+    .filtros-pedidos {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filtros-pedidos select {
+        width: 100%;
+    }
+
+    .dados-pedido {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-cartao-pedido {
+        flex-direction: column;
+    }
+
+    .acoes-restaurante {
+        flex-direction: column;
+    }
+
+    .acoes-restaurante button {
+        width: 100%;
+    }
+
+}
+
+/* ----------------------------------------------- */   
+/* ==== AVALIAÇÃO DO CLIENTE ===== */   
+.avaliacao-pedido {
+    margin-top: 16px;
+    padding: 15px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-creme);
+    border-left: 4px solid var(--cor-laranja);
+    border-radius: 8px;
+}
+
+.avaliacao-pedido h4 {
+    margin: 0 0 10px;
+    color: var(--cor-marrom);
+}
+
+.avaliacao-pedido p {
+    margin: 7px 0;
+    color: var(--cor-marrom);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.avaliacao-pedido .estrelas-avaliacao {
+    color: var(--cor-amarelo);
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.estrelas-avaliacao span {
+    color: var(--cor-texto);
+    font-size: 13px;
+    letter-spacing: normal;
+}
+
+.avaliacao-pedido small {
+    color: var(--cor-marrom-claro);
+}
+
+
+/* -------------------------- */    
+/* ==== REDUÇÃO ANIMAÇÃO ===== */   
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+
+}

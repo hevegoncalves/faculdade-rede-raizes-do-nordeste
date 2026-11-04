@@ -1,0 +1,808 @@
+/*============================================  
+        TELA - PROGRAMA FIDELIDADE
+==============================================*/ 
+ 
+/* --------------------------------- */ 
+/* ===== CONFIGURAÇÕES GERAIS ===== */ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+
+    background-color: var(--cor-fundo);
+    background-image:
+        linear-gradient(
+            rgba(49, 33, 33, 0.35),
+            rgba(49, 33, 33, 0.35)
+        ),
+        url("img/fundo-restaurante.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*------------------------ */ 
+/* ====== CABEÇALHO ===== */ 
+.cabecalho {
+    width: 100%;
+    background-color: var(--cor-marrom);
+    padding: 15px 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho-conteudo {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: var(--cor-creme);
+    flex-shrink: 0;
+}
+
+.marca img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.nome-marca {
+    max-width: 150px;
+
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.menu-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 22px;
+    flex-wrap: wrap;
+    color: var(--cor-creme);
+}
+
+.link-navegacao {
+    position: relative;
+    color: var(--cor-creme);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color var(--transicao);
+}
+
+.link-navegacao:hover {
+    color: var(--cor-creme-escuro);
+}
+
+.link-cadastro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+    border-radius: 8px;
+
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        background-color var(--transicao),
+        transform var(--transicao);
+}
+
+.link-cadastro:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-2px);
+}
+
+.link-navegacao:focus-visible,
+.link-cadastro:focus-visible,
+.botao-participar:focus-visible,
+.botao-voltar:focus-visible,
+.rodape a:focus-visible {
+    outline: 3px solid var(--cor-laranja);
+    outline-offset: 4px;
+}
+
+/* Conteúdo principal */
+.pagina-fidelidade {
+    flex: 1;
+    width: 100%;
+    padding: 50px 24px 70px;
+    background-color: var(--cor-fundo);
+}
+
+.secao-fidelidade {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 60px;
+
+    background-color: var(--cor-creme-escuro);
+    border: 1px solid var(--cor-creme-escuro);
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* ----------------------------------- */ 
+/* ===== APRESENTAÇÃO PRINCIPAL ===== */ 
+.fidelidade-apresentacao {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.texto-destaque {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--cor-marrom-escuro);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.fidelidade-apresentacao h1 {
+    margin-bottom: 22px;
+
+    font-family: var(--fonte-titulo);
+    font-size: clamp(44px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--cor-marrom);
+}
+
+.fidelidade-apresentacao h1 span {
+    color: var(--cor-laranja-escuro);
+}
+
+.introducao-fidelidade {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.botao-participar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+    padding: 14px 30px;
+    border: 0;
+    border-radius: 8px;
+
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(109, 74, 62, 0.18);
+    transition:
+        background-color var(--transicao),
+        transform var(--transicao),
+        box-shadow var(--transicao);
+}
+
+.botao-participar:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(109, 74, 62, 0.22);
+}
+
+.observacao-fidelidade {
+    margin: 18px auto 0;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--cor-marrom);
+}
+
+/* Blocos de conteúdo */
+.bloco-fidelidade {
+    margin-top: 48px;
+}
+
+.titulo-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.icone-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+
+    background-color: rgba(224, 131, 43, 0.15);
+    color: var(--cor-laranja-escuro);
+    font-size: 32px;
+}
+
+.subtitulo-bloco {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--cor-marrom-escuro);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.titulo-bloco h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.15;
+    color: var(--cor-marrom);
+}
+
+.passos-fidelidade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartao-passo {
+    padding: 26px 24px;
+    background-color: rgba(255, 249, 241, 0.88);
+    border: 1px solid rgba(109, 74, 62, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(49, 33, 33, 0.06);
+}
+
+.numero-passo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+
+    background-color: var(--cor-marrom);
+    color: var(--cor-creme);
+    font-family: var(--fonte-titulo);
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.cartao-passo h3 {
+    margin-bottom: 10px;
+    font-family: var(--fonte-titulo);
+    font-size: 26px;
+    color: var(--cor-marrom-escuro);
+}
+
+.cartao-passo p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+/* Cartões de recompensas */
+.bloco-recompensas {
+    padding-top: 42px;
+    border-top: 1px solid rgba(109, 74, 62, 0.2);
+}
+
+.texto-recompensas {
+    max-width: 760px;
+    margin: -8px auto 26px;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.cartoes-recompensas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartao-recompensa {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+    padding: 30px 18px;
+    overflow: hidden;
+
+    background-color: rgba(255, 249, 241, 0.92);
+    border: 1px solid rgba(109, 74, 62, 0.15);
+    border-radius: 18px;
+    text-align: center;
+
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.cartao-recompensa:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(49, 33, 33, 0.1);
+}
+
+.cartao-recompensa-destaque {
+    border: 2px solid var(--cor-laranja);
+}
+
+.icone-recompensa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+
+    background-color: rgba(224, 131, 43, 0.15);
+    color: var(--cor-laranja-escuro);
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.quantidade-pontos {
+    margin-bottom: 8px;
+    color: var(--cor-marrom);
+    font-size: 15px;
+}
+
+.quantidade-pontos strong {
+    font-family: var(--fonte-titulo);
+    font-size: 29px;
+    color: var(--cor-laranja-escuro);
+}
+
+.cartao-recompensa h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 23px;
+    line-height: 1.25;
+    color: var(--cor-marrom);
+}
+
+.selo-recompensa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 12px;
+
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    border-radius: 0 0 0 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Aviso */
+.aviso-fidelidade {
+    margin-top: 38px;
+    padding: 24px 26px;
+
+    background-color: rgba(172, 127, 94, 0.12);
+    border-left: 5px solid var(--cor-laranja);
+    border-radius: 8px;
+}
+
+.aviso-fidelidade h2 {
+    margin-bottom: 10px;
+    font-family: var(--fonte-titulo);
+    font-size: 27px;
+    color: var(--cor-marrom-escuro);
+}
+
+.aviso-fidelidade p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Chamada final */
+.chamada-fidelidade {
+    margin-top: 45px;
+    padding: 35px 25px;
+
+    background-color: var(--cor-marrom);
+    color: var(--cor-creme);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.detalhe-chamada {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--cor-creme-escuro);
+    font-size: 30px;
+}
+
+.chamada-fidelidade h2 {
+    margin-bottom: 12px;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.chamada-fidelidade p {
+    max-width: 650px;
+    margin: 0 auto 22px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.botao-participar-secundario {
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-marrom);
+}
+
+.botao-participar-secundario:hover {
+    background-color: var(--cor-creme);
+    color: var(--cor-marrom-escuro);
+}
+
+
+/* ----------------------------------- */ 
+/* ===== BOTAO VOLTAR ===== */ 
+.botao-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+    margin: 35px auto 0;
+    padding: 14px 24px;
+
+    border-radius: 8px;
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+
+    transition:
+        background-color var(--transicao),
+        transform var(--transicao);
+}
+
+.botao-voltar:hover {
+    background-color: var(--cor-laranja-escuro);
+    transform: translateY(-2px);
+}
+
+
+/* ----------------- */ 
+/* ==== RODAPÉ ===== */ 
+.rodape {
+    width: 100%;
+    background-color: var(--cor-creme-escuro);
+    color: var(--cor-texto);
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 5%;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+}
+
+.rodape-marca img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.rodape-marca p {
+    max-width: 280px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.rodape-links h2 {
+    margin-bottom: 5px;
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    color: var(--cor-marrom);
+}
+
+.rodape-links a {
+    color: var(--cor-texto);
+    font-size: 15px;
+    text-decoration: none;
+    transition: color var(--transicao);
+}
+
+.rodape-links a:hover {
+    color: var(--cor-laranja-escuro);
+    text-decoration: underline;
+}
+
+/* ----------------------- */ 
+/* ==== RODAPÉ FINAL===== */ 
+.rodape-final {
+    padding: 18px 20px;
+    background-color: var(--cor-marrom);
+    color: var(--cor-branco);
+    border-top: 1px solid var(--cor-branco);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------- */   
+/* ==== RESPONSIVIDADE PARA TELAS MENORES ===== */   
+@media (max-width: 1000px) {
+    .cabecalho {
+        padding: 15px 3%;
+    }
+
+    .cabecalho-conteudo {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu-navegacao {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .secao-fidelidade {
+        padding: 45px 35px;
+    }
+
+    .passos-fidelidade,
+    .cartoes-recompensas {
+        gap: 15px;
+    }
+
+    .cartao-passo {
+        padding: 22px 18px;
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .passos-fidelidade,
+    .cartoes-recompensas {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-navegacao {
+        display: none;
+    }
+
+    .cartao-passo {
+        padding: 24px;
+    }
+
+    .cartao-recompensa {
+        min-height: 190px;
+    }
+
+    .titulo-bloco {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .cabecalho {
+        padding: 15px 20px;
+    }
+
+    .marca img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nome-marca {
+        font-size: 23px;
+    }
+
+    .menu-navegacao {
+        display: none;
+    }
+
+    .link-navegacao {
+        font-size: 14px;
+    }
+
+    .link-cadastro {
+        padding: 9px 13px;
+        font-size: 14px;
+    }
+
+    .pagina-fidelidade {
+        padding: 25px 14px 40px;
+    }
+
+    .secao-fidelidade {
+        padding: 32px 20px;
+        border-radius: 18px;
+    }
+
+    .fidelidade-apresentacao {
+        margin-bottom: 42px;
+    }
+
+    .fidelidade-apresentacao h1 {
+        font-size: 43px;
+    }
+
+    .introducao-fidelidade {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .botao-participar {
+        width: 100%;
+        padding: 13px 18px;
+    }
+
+    .bloco-fidelidade {
+        margin-top: 38px;
+    }
+
+    .titulo-bloco {
+        gap: 12px;
+    }
+
+    .icone-bloco {
+        width: 48px;
+        height: 48px;
+        font-size: 27px;
+    }
+
+    .titulo-bloco h2 {
+        font-size: 30px;
+    }
+
+    .subtitulo-bloco {
+        font-size: 11px;
+    }
+
+    .cartao-passo h3 {
+        font-size: 24px;
+    }
+
+    .texto-recompensas {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .aviso-fidelidade {
+        padding: 20px 17px;
+    }
+
+    .aviso-fidelidade h2 {
+        font-size: 24px;
+    }
+
+    .aviso-fidelidade p {
+        font-size: 14px;
+    }
+
+    .chamada-fidelidade {
+        padding: 30px 20px;
+    }
+
+    .chamada-fidelidade h2 {
+        font-size: 29px;
+    }
+
+    .chamada-fidelidade p {
+        font-size: 15px;
+    }
+
+    .botao-voltar {
+        width: 100%;
+        padding: 13px 16px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 25px;
+    }
+
+    .rodape-marca {
+        text-align: center;
+    }
+
+    .rodape-marca img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .rodape-marca p {
+        margin: 0 auto;
+    }
+
+    .rodape-links {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rodape-final {
+        padding: 16px;
+        font-size: 12px;
+    }
+}
+
+/* -------------------------- */    
+/* ==== REDUÇÃO ANIMAÇÃO ===== */   
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

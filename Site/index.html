@@ -1,0 +1,508 @@
+<!-- ==================================================
+        TELA - APRESENTAÇÃO DO RESTAURANTE
+======================================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conheça o nosso espaço, um restaurante dedicado aos sabores e às tradições da culinária nordestina."
+    >
+
+    <title>Raízes do Nordeste | Sabores da nossa terra</title>
+
+<!-- ===== FONTES DO PROJETO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+<!-- ===== ARQUIVO CSS (ESTILO PRINCIPAL DO SITE) ===== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO E NAVEGAÇÃO PRINCIPAL ===== -->
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+            <a href="index.html" class="marca" aria-label="Raízes do Nordeste - Página inicial">
+                <span class="nome-marca"> REDE RAÍZES DO NORDESTE</span>
+            </a>
+
+<!-- botão menu -->
+            <button
+                class="botao-menu"
+                id="botaoMenu"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+                aria-controls="menuNavegacao"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-navegacao" id="menu-navegacao" aria-label="Menu principal">
+
+                <a href="index.html" class="link-navegacao ativo" aria-current="page">Início</a>
+                <a href="cardapio.html" class="link-cardapio">Cardápio</a>
+                <a href="index.html#sobre" class="link-sobre">Nossa história</a>
+                <a href="unidades.html" class="link-unidades">Nossas unidades</a>
+                <a href="cadastro.html" class="link-cadastro">Minha conta</a>
+                
+            </nav>
+        </div>
+
+    </header>
+
+<!-- ===== CONTEUDO PRINCIPAL ===== -->
+<!-- Apresentação do restaurante -->
+    <main>
+
+        <section class="apresentacao" id="inicio">
+
+            <div class="container apresentacao-conteudo">
+                <div class="logo-apresentacao-container">
+                    <img
+                        src="img/logo.png"
+                        alt="Logo do restaurante Raízes do Nordeste"
+                        class="logo-apresentacao"
+                    >
+                </div>
+
+                <div class="apresentacao-texto">
+                    <span class="texto-destaque">Para todos os momentos</span>
+
+                    <h1> 
+                        O sabor da nossa terra,
+                        <span>na sua casa.</span>
+                    </h1>
+
+                    <p>
+                        Descubra pratos típicos preparados para 
+                        celebrar a cultura e a culinária nordestina.
+                    </p>
+
+                    <a href="cardapio.html" class="botao-principal">Conheça nosso cardápio</a>
+                </div>
+
+                <div class="apresentacao-imagem">
+                    <div class="imagem-reserva">
+                        <div class="circulo-interno" aria-hidden="true"></div>
+
+                        <span class="imagem-reserva-icone" aria-hidden="true">♨</span>
+
+                        <p> 
+                            Tradição que
+                            <span>atravessa gerações</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+<!-- ===== PRATOS EM DESTAQUE ===== -->
+<!-- segundo grid onde tem uma apresentação dos pratos-->
+        <section class="secao-destaques" id="destaques">
+
+            <div class="container">
+                <div class="titulo-secao">
+                    <h2> 
+                        Sabores que conquistam! 
+                    </h2>
+
+                    <p>
+                        Conheça três clássicos da culinária nordestina
+                        que celebram nossa tradição.
+                    </p>
+                </div>
+
+                <div class="lista-pratos">
+<!-- prato 1 - Acarajé Baiano -->
+                    <article class="cartao-prato">
+
+                        <div class="prato-imagem prato-imagem-1">
+                            <img
+                                src="img/Acaraje.jpg"
+                                alt="Acarajé baiano servido em um prato"
+                            >
+                        </div>
+
+                        <div class="prato-informacoes">
+                            <h3>
+                                Acarajé Baiano
+                            </h3>
+
+                            <p>
+                                Uma delícia da culinária baiana.
+                                Com massa de feijão-fradinho frito, 
+                                recheado com vatapá e camarão.
+                                Saboroso em cada mordida!
+                            </p>
+                        </div>
+
+                    </article>
+
+<!-- prato 2 - Baiao de Dois -->
+                    <article class="cartao-prato">
+
+                        <div class="prato-imagem prato-imagem-2">
+                            <img
+                                src="img/baiao-de-dois.jpg"
+                                alt="Prato de baiao de dois nordestino"
+                            >
+                        </div>
+
+                        <div class="prato-informacoes">
+                            <h3>
+                                Baião de Dois
+                            </h3>
+
+                            <p>
+                                Clássico da culinária nordestina. Preparado com
+                                arroz, feijão, queijo coalho e temperos especiais.
+                                O sabor e tradição Nordestina em cada garfada!
+                            </p>
+                        </div>
+
+                    </article>
+
+<!-- prato 3 - Moqueca de peixe -->
+                    <article class="cartao-prato">
+
+                        <div class="prato-imagem prato-imagem-3">
+                            <img
+                                src="img/Moqueca.jpg"
+                                alt="Moqueca de peixe preparada com pimentões"
+                            >
+                        </div>
+
+                        <div class="prato-informacoes">
+                            <h3>
+                                Moqueca de Peixe
+                            </h3>
+
+                            <p>
+                                Tradicional da culinária brasileira. Preparado com
+                                peixe fresco, leite de coco, pimentões e temperos especiais.
+                                Trazendo a combinação irresistível à mesa!
+                            </p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <div class="destaques-acao">
+                    <a href="cardapio.html" class="botao-secundario">Ver cardápio completo</a>
+                </div>
+            </div>
+
+        </section>
+
+<!-- ===== PROGRAMA DE FIDELIDADE ===== -->
+        <section class="programa-fidelidade" id="fidelidade">
+
+<!-- estrelas decorativas da seção para maior destaque a pagina-->
+            <span class="estrela-decorativa estrela-1" aria-hidden="true">★</span>
+            <span class="estrela-decorativa estrela-2" aria-hidden="true">✦</span>
+            <span class="estrela-decorativa estrela-3" aria-hidden="true">★</span>
+            <span class="estrela-decorativa estrela-4" aria-hidden="true">✦</span>
+            <span class="estrela-decorativa estrela-5" aria-hidden="true">★</span>
+            <span class="estrela-decorativa estrela-6" aria-hidden="true">✦</span>
+
+            <div class="container fidelidade-conteudo">
+<!-- imagem do clube fidelidade-->
+                <div class="fidelidade-galera">
+                    <div class="fidelidade-foto fidelidade-foto-clientes">
+                        <img
+                            src="img/fidelidade2.png"
+                            alt="Pessoas aproveitando a refeição juntas"
+                        >
+                    </div>
+
+                    <div class="fidelidade-foto fidelidade-foto-pratos">
+                        <img
+                            src="img/fidelidade.png"
+                            alt="Pratos preparados para uma refeição especial"
+                        >
+                    </div>
+                </div>
+
+<!-- Texto dos beneficios -->
+                <div class="fidelidade-texto">
+                    <span class="fidelidade-destaque">UM JEITO ESPECIAL DE RECOMPENSAR NOSSOS CLIENTES</span>
+
+                    <h2>
+                        Seu amor pela culinária nordestina
+                        <span>vale pontos!</span>
+                    </h2>
+
+                    <p>
+                        Faça seus pedidos, aculume pontos e troque por
+                        descontos especiais. Cada pedido é uma nova
+                        oportunidade de aproveitar ainda mais nossos pratos!
+                    </p>
+
+                    <div class="fidelidade-beneficios">
+                        <div class="beneficio">
+                            <span aria-hidden="true">✦</span>
+
+                            <p>
+                                Acumule pontos a cada compra elegível.
+                            </p>
+                        </div>
+                    
+                        <div class="beneficio">
+                            <span aria-hidden="true">✦</span>
+
+                            <p>
+                                Troque pontos por recompensas
+                            </p>
+                        </div>
+                    </div>      
+
+                    <div class="fidelidade-botoes">
+                        <a href="fidelidade.html" class="botao-fidelidade">Conheça o programa</a>
+                        <a href="unidades.html" class="botao-unidade">Achar a loja mais perto de você</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+<!-- ===== DESTAQUE DOS MAIS PEDIDOS ===== -->
+        <section class="convite-cardapio">
+
+            <div class="container convite-conteudo">
+                <span class="convite-destaque">DO NOSSO RESTAURANTE PARA SUA CASA</span>
+
+                <h2>
+                    Seus sabores favoritos, para entrega.
+                </h2>
+            </div>
+
+        </section>
+
+<!-- LANCHES EM DESTAQUE -->
+        <section class="secao-lanches" id="lanches">
+
+            <div class="container">
+                <div class="lanches-cabecalho">
+                    <div class="lanches-titulo">
+                        <span class="lanches-destaque">Os queridinhos da casa</span>
+
+                        <h2>
+                            Pedidos que não têm erro!
+                        </h2>
+
+                        <p>
+                            Peça seus lanches e porções favoritos e aproveite
+                            o gostinho do Raízes do Nordeste sem sair de casa.
+                        </p>
+                    </div>
+
+                    <a href="cardapio.html" class="botao-cardapio-completo">Cardápio completo</a>
+                </div>
+
+<!-- lista dos 3 lanches para demonstração -->
+                <div class="lista-lanches">
+<!-- lanche 1 (pastel regional)-->
+                    <article class="cartao-lanche">
+
+                        <div class="lanche-imagem">
+                            <img
+                                src="img/pastel-regional.jpg"
+                                alt="Pastel Regional"
+                                loading="lazy"
+                            >
+
+                            <span class="selo-lanche">Mais pedido</span>
+                        </div>
+
+                        <div class="lanche-informacoes">
+                            <div class="lanche-nome-preco">
+                                <h3>
+                                    Pastel Regional
+                                </h3>
+
+                                <span class="lanche-preco">R$ 12,90</span>
+                            </div>
+
+                            <p>
+                                Pastel crocante de carne seca,
+                                trazendo uma combinação irresistível de sabores!
+                            </p>
+                        </div>
+
+                    </article>
+
+<!-- lanche 2 (cachorro-quente-regional)-->
+                    <article class="cartao-lanche">
+
+                        <div class="lanche-imagem">
+                            <img
+                                src="img/cachorro-quente-regional.jpg"
+                                alt="Cachorro-quente Regional"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="lanche-informacoes">
+                            <div class="lanche-nome-preco">
+                                <h3>
+                                    Cachorro-Quente Regional
+                                </h3>
+
+                                <span class="lanche-preco">R$ 15,90</span>
+                            </div>
+
+                            <p>
+                                Pão macio, carne moída bem temperada e 
+                                muito sabor em cada mordida!
+                            </p>
+                        </div>
+
+                    </article>
+
+<!-- lanche 3 (sanduiche de carne de sol) -->
+                    <article class="cartao-lanche">
+
+                        <div class="lanche-imagem">
+                            <img
+                                src="img/sanduiche-de-sol.png"
+                                alt="Sanduiche de Carne de Sol"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="lanche-informacoes">
+                            <div class="lanche-nome-preco">
+                                <h3>
+                                    Sanduíche de Carne de Sol
+                                </h3>
+
+                                <span class="lanche-preco">R$ 35,00</span>
+                            </div>
+
+                            <p>
+                                Sanduíche de carne desfiada, com queijo coalho.
+                                Totalmente suculento!
+                            </p>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+<!-- SESSÃO - NOSSA HISTORIA (CONTA UMA PREVE HISTORIA DO RESTAURANTE) ===== -->
+        <section class="secao-sobre" id="sobre">
+
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <h2>
+                        Nossa História
+                    </h2>
+
+                    <p>
+                        O Raízes do Nordeste nasceu da paixão pelos sabores,
+                        pelas tradições e pela riqueza da culinária nordestina.
+                        Nosso propósito é levar até você lanches inspirados
+                        nessa cultura tão especial, preparados com carinho
+                        e ingredientes que valorizam as raízes da nossa região.
+                    </p>
+
+                    <p>
+                        Mais do que servir comida, queremos proporcionar
+                        uma experiência cheia de sabor, acolhimento e tradição.
+                        Cada pedido é um convite para conhecer e celebrar
+                        um pouquinho do Nordeste.
+                    </p>
+                </div>
+                
+                <div class="sobre-imagem">
+                    <img
+                        src="img/entrada-restaurante.png"
+                        alt="Entrada do restaurante"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- ==== RODAPÉ - CAMPO INFERIOR DA TELA ===== -->
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+            <div class="rodape-marca">
+                <img
+                    src="img/logo.png"
+                    alt=""
+                    class="rodape-logo"
+                >
+
+                <p>
+                    Raízes do Nordeste
+                </p>
+    
+                <span>Sabores da nossa terra.</span>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Navegação
+                </h2>
+
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="cadastro.html">Acesse sua conta</a>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <div class="rodape-links">
+                <h2>
+                    Informações
+                </h2>
+
+                <a href="index.html#sobre">Nossa história</a>
+                <a href="unidades.html">Nossas unidades</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+
+<!-- ==== RODAPÉ - FINAL ===== --> 
+        <div class="rodape-final">
+            <p>
+                &copy; <span id="anoAtual">2026</span>
+                Raízes do Nordeste. Todos os direitos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+<!-- ===== JAVASCRIPT ===== --> 
+<script src="menu.js"></script>
+
+</body>
+</html>
